@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import MeetingDetails from "../components/MeetingDetailsModal";
 import { header, rows } from "../constants/dummyData";
 import { apiCall } from "../services/axios";
+import LeadActivity from "../components/LeadActivity";
 
 const Dashboard = () => {
   const [showModal, setShowModal] = useState(false);
@@ -24,6 +25,8 @@ const Dashboard = () => {
       console.log(e);
     }
   };
+
+  const [lead, setLead] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -63,7 +66,8 @@ const Dashboard = () => {
           />
         </div>
       </div>
-      <Table header={header} rows={rows} />
+      <Table header={header} rows={rows} onSelect={setLead} />
+      <LeadActivity isOpen={!!lead} lead={lead} onClose={() => setLead(null)} />
     </div>
   );
 };
