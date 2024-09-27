@@ -486,3 +486,27 @@ export const competitorData = [
     suggestions: "Emphasize A capability"
   }
 ];
+
+export const deadlineHeader = [
+  { key: "name", label: "Rep Name" },
+  { key: "task", label: "Task" },
+  { key: "deadline", label: "Deadline" },
+];
+
+export const deadlineData = [
+  {
+    name: "Muhammed Ali",
+    task: "Send proposal",
+    deadline: "2024-10-07",
+  },
+  {
+    name: "Sienna",
+    task: "Follow-up call",
+    deadline: "2024-10-15",
+  },
+  {
+    name: "Andrew",
+    task: "Product demo",
+    deadline: "2024-11-01",
+  },
+];
