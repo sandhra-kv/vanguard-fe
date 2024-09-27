@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Table from "../components/Table";
 import { header, rows } from "../constants/dummyData";
 import React, { useEffect } from "react";
 import { apiCall } from "../services/axios";
 import Button from "../components/Button";
+import LeadActivity from "../components/LeadActivity";
 
 const Dashboard = () => {
   const getData = async () => {
@@ -18,6 +20,8 @@ const Dashboard = () => {
       console.log(e);
     }
   };
+
+  const [lead, setLead] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -56,7 +60,8 @@ const Dashboard = () => {
           />
         </div>
       </div>
-      <Table header={header} rows={rows} />
+      <Table header={header} rows={rows} onSelect={setLead} />
+      <LeadActivity isOpen={!!lead} lead={lead} onClose={() => setLead(null)} />
     </div>
   );
 };

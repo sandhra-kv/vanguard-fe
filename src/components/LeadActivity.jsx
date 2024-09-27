@@ -9,7 +9,7 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
 
   const getStatusClass = (status) => {
     switch (status) {
-      case "Luke warm":
+      case "Luke Warm":
         return "bg-[#F0F9FF] text-[#026AA2]";
       case "Warm":
         return "bg-[#FEF6E7] text-[#865503]";
@@ -55,17 +55,17 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
           <div>
             <div className="flex gap-2">
               <div className="text-lg text-[#101928] font-medium">
-                {lead.customer}
+                {lead?.name}
               </div>
               <div
                 className={`rounded-[16px] py-[2px] px-2.5 text-sm font-medium ${getStatusClass(
-                  lead.status
+                  lead?.status
                 )}`}
               >
-                {lead.status}
+                {lead?.status}
               </div>
             </div>
-            <div className="text-lg text-[#475367]">{lead.designation}</div>
+            <div className="text-lg text-[#475367]">{lead?.job_title}</div>
           </div>
         </div>
         <img
