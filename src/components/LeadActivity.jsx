@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SidePane from "./SidePane";
 import Stepper from "./Stepper";
 import Tab from "./Tab";
+import ActivityInsights from "./ActivityInsights";
 
 const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
   const [search, setSearch] = useState("");
@@ -81,9 +82,13 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
         selectedTab={selectedTab}
         onSelect={setSelectedTab}
       />
-      <div className="h-[calc(100%-104px)] relative">
-        <div className="h-[calc(100%-250px)] overflow-y-auto px-9 pt-4">
-          <Stepper steps={steps} />
+      <div className="h-[calc(100%-145px)] relative">
+        <div className="h-[calc(100%-250px)] overflow-y-auto">
+          {selectedTab === "Activity Log" ? (
+            <Stepper steps={steps} />
+          ) : (
+            <ActivityInsights />
+          )}
         </div>
         <div className="absolute bottom-4 px-9 w-full">
           <div className="relative w-full flex">
