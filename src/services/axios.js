@@ -1,10 +1,10 @@
 import axios from "axios";
-import { API_ENDPOINT } from "../constants/common";
+import { API_ENDPOINT, AI_API_ENDPOINT } from "../constants/common";
 
 export const apiCall = async (payload) => {
-  const { url } = payload;
+  const { url, isAI = false } = payload;
 
-  const API_URL = `${API_ENDPOINT}${url}`;
+  const API_URL = `${isAI ? AI_API_ENDPOINT : API_ENDPOINT}${url}`;
 
   const apiParams = {
     ...payload,

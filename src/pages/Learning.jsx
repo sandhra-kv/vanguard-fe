@@ -71,27 +71,35 @@ const Learning = () => {
         </div>
         <h1 className="text-lg font-lg">Have a quick read..!!</h1>
         <div className="flex flex-wrap ">
-            {docLinks.map((link, index) => {
-               return (
-                  //   <div key={index} className="relative flex flex-col gap-1 items-center">
-                  //      <iframe
-                  //         key={link}
-                  //         width="300"
-                  //         height="200"
-                  //         src={link}
-                  //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  //         allowFullScreen
-                  //         title="Embedded Pdf"
+          {docLinks.map((link, index) => {
+            return (
+              //   <div key={index} className="relative flex flex-col gap-1 items-center">
+              //      <iframe
+              //         key={link}
+              //         width="300"
+              //         height="200"
+              //         src={link}
+              //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              //         allowFullScreen
+              //         title="Embedded Pdf"
 
-                  //      />
-                  <a key={index} href={link.url} target="_blank" rel="noreferrer" className="relative">
-                     <img src={pdf_icon} alt="pdf link" className="size-40" />
-                     <span className="absolute top-16 left-6 text-sm w-[110px] h-[42px] text-[#505BC5] font-semibold text-center rounded bg-white overflow-hidden">{link.name}</span>
-                  </a>
-                  //   </div>
-               );
-            })}
-         </div>
+              //      />
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="relative"
+              >
+                <img src={pdf_icon} alt="pdf link" className="size-40" />
+                <span className="absolute top-16 left-6 text-sm w-[110px] h-[42px] text-[#505BC5] font-semibold text-center rounded bg-white overflow-hidden">
+                  {link.name}
+                </span>
+              </a>
+              //   </div>
+            );
+          })}
+        </div>
       </section>
       <div className="h-full w-[529px] bg-white shadow-md rounded-lg relative">
         <div className="absolute bottom-4 px-5 w-full">
