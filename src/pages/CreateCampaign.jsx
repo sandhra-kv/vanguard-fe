@@ -1,4 +1,5 @@
 import React from "react";
+import CampaignSetup from "../components/CampaignSetup";
 
 const CreateCampaign = () => {
   return (
@@ -7,6 +8,10 @@ const CreateCampaign = () => {
       <h4 className="text-[#667185] text-sm mt-1">
         Build stronger relationships with customers
       </h4>
+      <div className="w-full flex gap-3">
+        <div className="w-3/4"><CampaignSetup /></div>
+        <div></div>
+      </div>
     </div>
   );
 };
