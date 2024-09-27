@@ -2,7 +2,11 @@ import EngagementChart from "../components/charts/EngagementChart";
 import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEfficiency";
 import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
 import HorizontalBarChart from "../components/charts/HorizontalBarChart";
-import { competitorData, competitorHeader, horizontalChartData } from "../constants/dummyData";
+import {
+  competitorData,
+  competitorHeader,
+  horizontalChartData,
+} from "../constants/dummyData";
 import ExcitementLevelChart from "../components/charts/ExcitementLevelChart";
 import PipelineVelocity from "../components/charts/PipelineVelocity";
 import PieChart from "../components/charts/PieChart";
@@ -11,7 +15,9 @@ import {
   leaderBoardHeaders,
   leaderBoardData,
   accountabilityHeader,
-  accountabilityData
+  accountabilityData,
+  deadlineHeader,
+  deadlineData,
 } from "../constants/dummyData";
 import BarChart from "../components/charts/BarChart";
 
@@ -124,7 +130,7 @@ const TeamPerformance = () => {
         </div>
         <div className="w-full">
           <p className="text-base font-semibold pb-4">Upcoming Deadlines</p>
-          <List headers={accountabilityHeader} data={accountabilityData} />
+          <List headers={deadlineHeader} data={deadlineData} />
         </div>
       </div>
     </div>
