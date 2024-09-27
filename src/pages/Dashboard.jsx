@@ -43,14 +43,16 @@ const Dashboard = () => {
 
   return (
     <div className="p-5">
-      <MeetingDetails
-        showModal={showModal}
-        closeModal={closeModal}
-        name="Analese Jonathen"
-        date="2024-09-15T15:00:00.000Z"
-        duration="3 hours 57 minutes"
-        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
-      />
+      {showModal && (
+        <MeetingDetails
+          showModal={showModal}
+          closeModal={closeModal}
+          name="Analese Jonathen"
+          date="2024-09-15T15:00:00.000Z"
+          duration="3 hours 57 minutes"
+          videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+        />
+      )}
 
       <div className="flex justify-between my-3">
         <h1 className="text-2xl font-medium">Hot leads</h1>

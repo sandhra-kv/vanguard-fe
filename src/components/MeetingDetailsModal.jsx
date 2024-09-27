@@ -29,8 +29,24 @@ const MeetingDetails = ({
     setSelectedTab(tab);
   };
 
-  const sendMessage = () => {
-    if (search) console.log(search);
+  const sendMessage = async () => {
+    if (thread && search)
+      try {
+        const resp = await apiCall({
+          method: "POST",
+          url: `/chat`,
+          data: {
+            thread_id: thread,
+            message: search,
+            senderName: "Ram Rao"
+          },
+          isAI: true
+        });
+        setSearch('')
+        return resp;
+      } catch (e) {
+        console.log(e);
+      }
   };
 
   const getData = async () => {
