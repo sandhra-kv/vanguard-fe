@@ -67,7 +67,7 @@ const Dashboard = () => {
       )}
 
       <div className="flex justify-between my-3">
-        <h1 className="text-2xl font-medium">Hot leads</h1>
+        <h1 className="text-2xl font-semibold">Hot leads</h1>
         <div className="flex flex-row gap-3">
           <Button
             onClick={() => {}}
