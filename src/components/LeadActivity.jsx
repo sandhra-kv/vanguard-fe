@@ -64,8 +64,6 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
       if (lead?.id) {
         const resp = await getData();
 
-        console.log(resp.records?.[0]?.id);
-
         if (resp.records?.[0]?.id) {
           setThread(resp.records?.[0]?.id);
         }
