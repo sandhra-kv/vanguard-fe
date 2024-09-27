@@ -2,8 +2,8 @@ import React from "react";
 
 const Profile = ({ name, email, phone, url, date }) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl h-[216px] shadow-lg flex flex-row max-w-[780px]">
-      <div className="border-r-[1px] p-8 border-gray-200">
+    <div className="bg-white border border-gray-200 rounded-xl h-[216px] shadow-lg flex flex-row w-[75%] overflow-hidden">
+      <div className="border-r-[1px] py-8 px-20 border-gray-200">
         <div className="flex justify-center mt-3">
           <div className="relative">
             <img
@@ -27,7 +27,7 @@ const Profile = ({ name, email, phone, url, date }) => {
           <p className="text-gray-500 flex  text-sm justify-center">{email}</p>
         </div>
       </div>
-      <div className="flex flex-wrap p-12">
+      <div className="flex flex-wrap py-12 px-20 gap-4">
         <div className="flex flex-row gap-6 items-center w-[240px]">
           <img src="/icons/email.svg" alt="profile" className="w-5 h-5" />
           <div className="flex flex-col">
