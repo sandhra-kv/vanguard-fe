@@ -145,9 +145,9 @@ const ProfilePage = () => {
           circular: true,
         },
         ticks: {
-          display: true,
+          display: false,
           stepSize: 25,
-          color: "#505BC5",
+          // color: "#505BC5",
         },
         pointLabels: {
           font: {
