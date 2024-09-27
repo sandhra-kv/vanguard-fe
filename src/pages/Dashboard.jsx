@@ -62,7 +62,7 @@ const Dashboard = () => {
             icon="/icons/download.svg"
           />
           <Button
-            onClick={() => navigate('/create-campaign')}
+            onClick={() => navigate("/create-campaign")}
             label="Create Campaigns"
             variant="primary"
             icon="/icons/rounded-plus.svg"
@@ -72,11 +72,11 @@ const Dashboard = () => {
       <Table header={header} rows={leads} onSelect={setLead} />
       {!!lead && (
         <LeadActivity
-        isOpen={!!lead}
-        lead={lead}
-        onClose={() => setLead(null)}
-        openModal={openModal}
-      />
+          isOpen={!!lead}
+          lead={lead}
+          onClose={() => setLead(null)}
+          openModal={openModal}
+        />
       )}
     </div>
   );
