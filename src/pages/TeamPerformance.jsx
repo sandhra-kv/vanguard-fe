@@ -1,3 +1,8 @@
+import EngagementChart from "../components/charts/EngagementChart";
+import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEfficiency";
+import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
+
+
 const TeamPerformance = () => {
   return (
     <div className="p-5">
@@ -36,6 +41,11 @@ const TeamPerformance = () => {
         </div>
       </div>
       <p className="text-xl font-semibold pt-5">Team Leaderboard</p>
+    {/* <div class="w-[500px] h-[500px]">
+      <TeamCommunicationChart />
+      <EngagementChart />
+      <MeetingVolumeAndTimeEfficiencyChart />
+    </div> */}
     </div>
   );
 };
