@@ -101,7 +101,7 @@ const Learning = () => {
           })}
         </div>
       </section>
-      <div className="h-full w-[529px] bg-white shadow-md rounded-lg relative">
+      <div className="h-full min-w-[529px] w-[529px] bg-white shadow-md rounded-lg relative">
         <div className="absolute bottom-4 px-5 w-full">
           <div className="relative w-full flex">
             <input
