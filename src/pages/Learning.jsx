@@ -1,6 +1,7 @@
 import { docLinks, videoLinks } from "../constants/dummyData";
 import { useEffect, useState } from "react";
 import { apiCall } from "../services/axios";
+import pdf_icon from "../assets/pdfIcon.svg";
 
 const Learning = () => {
   const [search, setSearch] = useState("");
