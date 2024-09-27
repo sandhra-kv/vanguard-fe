@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import { navbarOptions } from "../constants/layout";
 
 const Sidebar = () => {
@@ -9,10 +10,10 @@ const Sidebar = () => {
 
   return (
     <div className="w-64 h-screen bg-white text-[#101928] border-r border-[#E4E7EC] flex flex-col pb-11 fixed">
-      <div className="pt-4 pl-6 text-3xl font-semibold text-[#414EC6]">
+      <div className="pt-5 pl-6 text-[28.63px] font-semibold text-[#414EC6]">
         Salesgenie
       </div>
-      <nav className="mt-6 px-2">
+      <nav className="mt-5 px-2">
         <ul>
           {navbarOptions.map((nav) => {
             return (
@@ -50,7 +51,11 @@ const Sidebar = () => {
           <div className="font-semibold">David Fayemi</div>
           <div className="text-[#475367]">david@rayna.ui</div>
         </div>
-        <img className="pl-5 cursor-pointer" src="/icons/sign-out.svg" alt="sign-out" />
+        <img
+          className="pl-5 cursor-pointer"
+          src="/icons/sign-out.svg"
+          alt="sign-out"
+        />
       </div>
     </div>
   );

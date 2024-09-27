@@ -1,12 +1,17 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Table from "../components/Table";
-import { header, rows } from "../constants/dummyData";
-import React, { useEffect } from "react";
-import { apiCall } from "../services/axios";
 import Button from "../components/Button";
+import MeetingDetails from "../components/MeetingDetailsModal";
+import { header, rows } from "../constants/dummyData";
+import { apiCall } from "../services/axios";
 import LeadActivity from "../components/LeadActivity";
 
 const Dashboard = () => {
+  const [showModal, setShowModal] = useState(false);
+  const closeModal = () => setShowModal(false);
+  const openModal = () => setShowModal(true);
+
   const getData = async () => {
     try {
       const resp = await apiCall({
@@ -41,13 +46,14 @@ const Dashboard = () => {
         name="Analese Jonathen"
         date="2024-09-15T15:00:00.000Z"
         duration="3 hours 57 minutes"
-        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4" /> */}
+        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+      /> */}
 
       <div className="flex justify-between my-3">
         <h1 className="text-2xl font-medium">Hot leads</h1>
         <div className="flex flex-row gap-3">
           <Button
-            onClick={() => {}}
+            onClick={openModal}
             label="Export CSV"
             variant="secondary"
             icon="/icons/download.svg"
