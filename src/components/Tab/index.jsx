@@ -1,5 +1,4 @@
 const Tab = ({ tabs, onSelect, selectedTab }) => {
-  console.log(tabs);
   return (
     <div className="w-full">
       {tabs?.map((tab, index) => {
