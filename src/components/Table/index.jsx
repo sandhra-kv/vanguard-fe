@@ -10,15 +10,17 @@ const Table = ({ header, rows, onSelect }) => {
     <section className="flex flex-col pb-7 pt-4 ">
       <ListItems
         header={header}
-        data={rows.slice(
-          currPage * PAGE_COUNT,
-          currPage * PAGE_COUNT +
-            Math.min(rows.length - currPage * PAGE_COUNT, PAGE_COUNT)
-        )}
+        data={
+          rows?.slice(
+            currPage * PAGE_COUNT,
+            currPage * PAGE_COUNT +
+              Math.min(rows.length - currPage * PAGE_COUNT, PAGE_COUNT)
+          ) || []
+        }
         onSelect={onSelect}
       />
       <TableFooter
-        max={Math.ceil(rows.length / PAGE_COUNT)}
+        max={Math.ceil((rows?.length || 0) / PAGE_COUNT)}
         currPage={currPage}
         setCurrPage={setCurrPage}
       />

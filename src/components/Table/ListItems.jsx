@@ -54,9 +54,10 @@ const ListItems = ({ data, header, onSelect }) => {
                         <input type="checkbox" />
                      </td> */}
               <td className="px-6 py-5">{field.name}</td>
-              <td className="px-6 py-5">{field.email}</td>
               <td className="px-6 py-5">{field.company}</td>
-              <td className="px-6 py-5">{field.job_title}</td>
+              <td className="px-6 py-5">{field.jobTitle}</td>
+              <td className="px-6 py-5">{field?.location}</td>
+              <td className="px-6 py-5">{field?.score}%</td>
               <td className="px-6 py-5">
                 <StatusFlag status={field.status} />
               </td>

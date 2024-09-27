@@ -5,10 +5,10 @@ import LeadAnalytics from "./LeadAnalytics";
 
 import CopyButton from "./CopyButton";
 
-const ActivityInsights = () => {
+const ActivityInsights = ({ lead }) => {
   return (
     <>
-      <div className="bg-[#F7F8FF] px-9 py-6 w-full border-b shadow-sm">
+      {/* <div className="bg-[#F7F8FF] px-9 py-6 w-full border-b shadow-sm">
         <div className="text-base text-[#344357] text-center">
           Got something to say? Reach out to make the connection!
         </div>
@@ -29,8 +29,8 @@ const ActivityInsights = () => {
             labelClassName="text-[#344054]"
           />
         </div>
-      </div>
-      <div className="h-[calc(100%-121px)] overflow-auto pb-4">
+      </div> */}
+      <div className="h-full overflow-auto pb-4">
         <LeadAnalytics />
         <div className="px-9 pt-4">
           <div className="pb-3 border-b border-[#F0F2F5] text-base text-[#344357] font-medium">
@@ -40,9 +40,9 @@ const ActivityInsights = () => {
             <img src="/icons/email.svg" alt="email" />
             <div className="w-full text-sm">
               <div className="text-[#475467] pb-1">Email</div>
-              <div className="text-[#101928]">analesejonathon@gmail.com</div>
+              <div className="text-[#101928]">{lead?.email}</div>
             </div>
-            <CopyButton content="analesejonathon@gmail.com" />
+            <CopyButton content={lead?.email} />
           </div>
           <div className="px-4 py-[14px] flex items-center gap-6">
             <img src="/icons/phone.svg" alt="email" />
@@ -57,9 +57,9 @@ const ActivityInsights = () => {
             <img src="/icons/location.svg" alt="email" />
             <div className="w-full text-sm">
               <div className="text-[#475467] pb-1">Location</div>
-              <div className="text-[#101928]">Salt Lake City, Utah, US</div>
+              <div className="text-[#101928]">{lead?.location}</div>
             </div>
-            <CopyButton content="Salt Lake City, Utah, US" />
+            <CopyButton content={lead?.location} />
           </div>
           <div className="px-4 py-[14px] flex items-center gap-6">
             <img src="/icons/url.svg" alt="email" />
@@ -78,9 +78,9 @@ const ActivityInsights = () => {
             <img src="/icons/users.svg" alt="email" />
             <div className="w-full text-sm">
               <div className="text-[#475467] pb-1">Name</div>
-              <div className="text-[#101928]">Titan Company Limited</div>
+              <div className="text-[#101928]">{lead?.company}</div>
             </div>
-            <CopyButton content="Titan Company Limited" />
+            <CopyButton content={lead?.company} />
           </div>
           <div className="w-[360px] h-[1px] bg-[#F0F2F5] ml-[60px]" />
           <div className="px-4 py-[14px] flex items-center gap-6">

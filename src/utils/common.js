@@ -18,3 +18,29 @@ export const formatISODate = (isoDate) => {
 
   return `${formattedDate} - ${formattedTime}`;
 };
+
+export const getStatus = (status) => {
+  let className = "";
+  let statusText = "";
+
+  switch (status) {
+    case "hot":
+      className = "bg-[#E7F6EC] text-[#036B26]";
+      statusText = "Hot";
+      break;
+    case "warm":
+      className = "bg-[#FEF6E7] text-[#865503]";
+      statusText = "Warm";
+      break;
+    case "luke_warm":
+      className = "bg-[#F0F9FF] text-[#026AA2]";
+      statusText = "Luke Warm";
+      break;
+    case "cold":
+      className = "bg-[#FFECE5] text-[#AD3307]";
+      statusText = "Cold";
+      break;
+    default:
+  }
+  return { className, statusText };
+};
