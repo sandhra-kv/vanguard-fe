@@ -6,6 +6,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import RadarChart from "../components/RadarChart";
+import Profile from "../components/Profile";
 
 ChartJs.register(CategoryScale, LinearScale, BarElement);
 
@@ -171,6 +172,13 @@ const Appointments = () => {
           chartOptions={radarChartOptions}
         />
       </div>
+       <Profile
+        name="Cizil Maria"
+        email="cizil@keycode.com"
+        url="cizil@keycode.com"
+        phone="08168141116"
+        date="Friday, Sept 25, 2025"
+      />
     </div>
   );
 };
