@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Table from "../components/Table";
 import Button from "../components/Button";
 import MeetingDetails from "../components/MeetingDetailsModal";
+import EmailDetailsModal from "../components/EmailDetailsModal";
 import { header } from "../constants/dummyData";
 import { apiCall } from "../services/axios";
 import LeadActivity from "../components/LeadActivity";
@@ -11,13 +12,15 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const closeModal = () => setShowModal(false);
   const [lead, setLead] = useState(null);
   const [leads, setLeads] = useState(null);
 
   const openModal = (type) => {
     console.log(type);
-    setShowModal(true);
+    if (type === "email_sent") setShowEmailModal(true);
+    else setShowModal(true);
   };
 
   const getData = async () => {
@@ -25,7 +28,7 @@ const Dashboard = () => {
       const resp = await apiCall({
         method: "GET",
         url: `/campaign/leads`,
-        data: {},
+        data: {}
       });
 
       return resp;
@@ -54,6 +57,12 @@ const Dashboard = () => {
           date="2024-09-15T15:00:00.000Z"
           duration="3 hours 57 minutes"
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+        />
+      )}
+      {showEmailModal && (
+        <EmailDetailsModal
+          showModal={showEmailModal}
+          closeModal={() => setShowEmailModal(false)}
         />
       )}
 
