@@ -28,19 +28,19 @@ const Dashboard = () => {
 
   const [lead, setLead] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      const resp = await getData();
+   useEffect(() => {
+      (async () => {
+         const resp = await getData();
 
-      if (resp) {
-        console.log(resp);
-      }
-    })();
-  }, []);
+         if (resp) {
+            console.log(resp);
+         }
+      })();
+   }, []);
 
-  return (
-    <div>
-      {/* <MeetingDetails
+   return (
+      <div>
+         {/* <MeetingDetails
         showModal={showModal}
         closeModal={closeModal}
         name="Analese Jonathen"
