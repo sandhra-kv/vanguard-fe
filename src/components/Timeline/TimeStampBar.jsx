@@ -11,7 +11,7 @@ const TimeStampBar = ({ timeRanges, totalDuration }) => {
                 return (
                     <div
                         key={index}
-                        className="absolute h-full bg-[#505BC5] opacity-50 transition-all duration-300 "
+                        className="absolute h-full bg-[#505BC5] transition-all duration-300 "
                         style={{
                             left: `${highlightStart}%`,
                             width: `${highlightWidth}%`,
