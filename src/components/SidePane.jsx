@@ -21,7 +21,7 @@ const SidePane = ({ children, title, isOpen, className = "", onClose }) => {
 
   return (
     <div
-      className={`fixed right-0 bottom-0 z-[100] h-[calc(100vh-64px)] w-[529px] overflow-y-auto bg-white shadow-lg transition-transform duration-300 ease-in-out  ${
+      className={`fixed right-0 bottom-0 z-20 h-[calc(100vh-64px)] w-[529px] overflow-y-auto bg-white shadow-lg transition-transform duration-300 ease-in-out  ${
         isOpen ? "translate-x-0" : "translate-x-full"
       } ${className}`}
     >
