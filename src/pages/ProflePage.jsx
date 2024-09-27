@@ -2,25 +2,28 @@ import {
   CategoryScale,
   Chart as ChartJs,
   BarElement,
-  LinearScale,
+  LinearScale
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import RadarChart from "../components/RadarChart";
 import Profile from "../components/Profile";
 import Button from "../components/Button";
 import ProfileWin from "../components/ProfileWin";
+import { useState } from "react";
+import AudioPlayer from "../components/AudioPlayer";
 
 ChartJs.register(CategoryScale, LinearScale, BarElement);
 
 const ProfilePage = () => {
+  const [isAudioClicked, setIsAudioClicked] = useState(false);
   const options = {
     maintainAspectRatio: false,
     responsive: true,
     borderSkipped: false,
     layout: {
       padding: {
-        top: 30,
-      },
+        top: 30
+      }
     },
     plugins: {
       legend: {
@@ -29,23 +32,23 @@ const ProfilePage = () => {
         labels: {
           usePointStyle: true,
           boxWidth: 8,
-          boxHeight: 8,
-        },
-      },
+          boxHeight: 8
+        }
+      }
     },
     scales: {
       x: {
         grid: {
-          display: false,
-        },
+          display: false
+        }
       },
       y: {
         grid: {
-          display: false,
+          display: false
         },
-        beginAtZero: true,
-      },
-    },
+        beginAtZero: true
+      }
+    }
   };
 
   const data = {
@@ -61,10 +64,10 @@ const ProfilePage = () => {
           topLeft: 4,
           topRight: 4,
           bottomLeft: 0,
-          bottomRight: 0,
+          bottomRight: 0
         },
         barPercentage: 1,
-        barThickness: 24,
+        barThickness: 24
       },
       {
         label: "Legend 2",
@@ -76,10 +79,10 @@ const ProfilePage = () => {
           topLeft: 4,
           topRight: 4,
           bottomLeft: 0,
-          bottomRight: 0,
+          bottomRight: 0
         },
         barPercentage: 1,
-        barThickness: 24,
+        barThickness: 24
       },
       {
         label: "Legend 3",
@@ -91,12 +94,12 @@ const ProfilePage = () => {
           topLeft: 4,
           topRight: 4,
           bottomLeft: 0,
-          bottomRight: 0,
+          bottomRight: 0
         },
         barPercentage: 1,
-        barThickness: 24,
-      },
-    ],
+        barThickness: 24
+      }
+    ]
   };
 
   const radarChartData = {
@@ -105,7 +108,7 @@ const ProfilePage = () => {
       "Time Management",
       "Objection Handling",
       "Negotiation",
-      "Closing Techniques",
+      "Closing Techniques"
     ],
     datasets: [
       {
@@ -116,9 +119,9 @@ const ProfilePage = () => {
         pointBorderWidth: 2,
         pointRadius: 5,
         pointBorderColor: "#FFFFFF",
-        pointBackgroundColor: "#000000",
-      },
-    ],
+        pointBackgroundColor: "#000000"
+      }
+    ]
   };
 
   const radarChartOptions = {
@@ -133,34 +136,34 @@ const ProfilePage = () => {
         angleLines: {
           display: true,
           lineWidth: 2,
-          color: "#FFFFFF",
+          color: "#FFFFFF"
         },
         grid: {
           display: true,
           lineWidth: 2,
           color: "#FFFFFF",
-          circular: true,
+          circular: true
         },
         ticks: {
           display: true,
           stepSize: 25,
-          color: "#505BC5",
+          color: "#505BC5"
         },
         pointLabels: {
           font: {
             size: 12,
             weight: 500,
-            family: "Manrope",
+            family: "Manrope"
           },
-          color: "#3C3C3C",
-        },
-      },
+          color: "#3C3C3C"
+        }
+      }
     },
     plugins: {
       legend: {
-        display: false,
-      },
-    },
+        display: false
+      }
+    }
   };
 
   return (
@@ -234,14 +237,14 @@ const ProfilePage = () => {
                 heading: "Time Control",
                 content:
                   " Work on prioritising tasks and improving efficiency.",
-                link: "View Training Module",
+                link: "View Training Module"
               },
               {
                 heading: "Deal Closing",
                 content:
                   " Practice advanced closing strategies to improve deal conversion.",
-                link: "Schedule Coaching Session",
-              },
+                link: "Schedule Coaching Session"
+              }
             ].map((item) => (
               <li>
                 <p>{item.heading}:</p>
@@ -259,7 +262,7 @@ const ProfilePage = () => {
               {[
                 "100 Calls This Week",
                 "Highest Open Rate",
-                "Top Performer",
+                "Top Performer"
               ].map((achievement) => (
                 <div className="px-3 py-1 bg-[#EFF3F8] rounded-full text-[11px] text-[#393D4A] h-[27px] w-fit flex items-center">
                   {achievement}
@@ -267,6 +270,44 @@ const ProfilePage = () => {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-6 rounded-xl border border-[#E4E7EC] bg-white p-6 flex gap-5">
+        <div className="w-[70%]">
+          <div className="text-[#475367] font-semibold pb-4 border-b border-[#F0F2F5]">
+            Call Recordings & Feedback
+          </div>
+          {isAudioClicked && (
+            <>
+              <AudioPlayer />
+              <ul className="mt-6 text-sm text-[#4F4F4F]">
+                {[
+                  { text: "Speaking Pace", value: "150 WPM" },
+                  { text: "Filler words", value: "Reduce 'um' and 'uh'" },
+                  {
+                    text: "Emotional tone",
+                    value: "Customer sounded frustrated with pricing"
+                  },
+                  {
+                    text: "Objection Handling",
+                    value: "Emphasised value but missed cross-sell opportunity"
+                  }
+                ]?.map((item) => (
+                  <div className="mb-2">
+                    <span className="font-semibold mr-1.5">{item.text}:</span>
+                    <span>{item.value}</span>
+                  </div>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+        <div
+          className="bg-[#F8FBFE] w-[30%] h-96 flex items-center justify-center"
+          role="presentation"
+          onClick={() => setIsAudioClicked(true)}
+        >
+          <img src="/images/recording.svg" alt="record" className="" />
         </div>
       </div>
     </div>
