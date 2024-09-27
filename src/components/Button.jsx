@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const Button = ({
   label,
   onClick,
-  type = 'button',        
-  className = '',           
-  disabled = false,          
-  variant = 'primary',  
-  icon,   
-  ...rest               
+  type = "button",
+  className = "",
+  disabled = false,
+  variant = "primary",
+  icon,
+  ...rest
 }) => {
   const baseClasses = `
-    px-4 py-2 font-medium rounded-lg text-sm focus:outline-none
+    px-4 py-2 font-semibold h-[36px] rounded-lg text-sm focus:outline-none
     disabled:bg-gray-400 disabled:cursor-not-allowed
   `;
 
@@ -32,11 +32,9 @@ const Button = ({
       disabled={disabled}
       {...rest}
     >
-      <div className='flex flex-row gap-2 items-center'>
-      {icon && (
-        <img src={icon} alt="icon" />
-      )}
-      <div>{label}</div>
+      <div className="flex flex-row gap-2 items-center">
+        {icon && <img src={icon} alt="icon" />}
+        <div>{label}</div>
       </div>
     </button>
   );
