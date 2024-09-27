@@ -57,22 +57,25 @@ const Stepper = ({ steps, openModal }) => {
                   )
                 )}
               </p>
-              {step?.metaData && Object.keys(step?.metaData)?.length !== 0 && (
+              {step?.messageType === "email_sent" && (
                 <>
                   <div className="border border-[#F4F5F6] rounded-[8px] p-3 w-full mt-3 shadow-sm text-[#576776] font-medium text-base truncate">
-                    {step?.messageType === "email_sent"
-                      ? step?.metaData?.header
-                      : ""}
+                    {step?.metaData?.header}
                   </div>
                   <button
                     value="viewDetails"
                     className="px-4 py-2 mt-3 font-semibold h-[36px] rounded-lg text-sm focus:outline-none bg-[#F7F8FF] text-[#505BC5]"
                     onClick={() => openModal(step?.messageType)}
                   >
-                    {step?.messageType === "email_sent"
-                      ? step?.metaData?.button
-                      : ""}
+                    {step?.metaData?.button}
                   </button>
+                </>
+              )}
+              {step?.messageType === "video_content" && (
+                <>
+                  <div className="border border-[#F4F5F6] rounded-[8px] p-3 w-full mt-3 shadow-sm text-[#576776] font-medium text-base truncate">
+                    render links
+                  </div>
                 </>
               )}
             </div>

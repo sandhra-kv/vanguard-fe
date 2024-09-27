@@ -2,15 +2,33 @@ import { docLinks, videoLinks } from "../constants/dummyData";
 import { useEffect, useRef, useState } from "react";
 import { apiCall } from "../services/axios";
 import pdf_icon from "../assets/pdfIcon.svg";
+import Stepper from "../components/Stepper";
 
 const Learning = () => {
   const [search, setSearch] = useState("");
   const [threadId, setThread] = useState("");
+  const [data, setData] = useState([]);
 
   const intervalId = useRef(null);
 
-  const sendMessage = () => {
-    if (search) console.log(search);
+  const sendMessage = async () => {
+    if (threadId && search)
+      try {
+        const resp = await apiCall({
+          method: "POST",
+          url: `/chat`,
+          data: {
+            thread_id: threadId,
+            message: search,
+            senderName: "Ram Rao",
+          },
+          isAI: true,
+        });
+        setSearch("");
+        return resp;
+      } catch (e) {
+        console.log(e);
+      }
   };
 
   const getThreads = async () => {
@@ -27,10 +45,25 @@ const Learning = () => {
     }
   };
 
+  const getChat = async (id) => {
+    try {
+      const resp = await apiCall({
+        method: "GET",
+        url: `/chats/${id}`,
+        data: {},
+      });
+
+      return resp;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(() => {
     if (threadId)
-      intervalId.current = setInterval(() => {
-        console.log("polling");
+      intervalId.current = setInterval(async () => {
+        const res = await getChat(threadId);
+        if (res?.records) setData(res?.records);
       }, 1000);
 
     return () => {
@@ -101,6 +134,9 @@ const Learning = () => {
         </div>
       </section>
       <div className="h-full min-w-[529px] w-[529px] bg-white shadow-md rounded-lg relative">
+        <div className="h-[calc(100%-80px)] overflow-y-auto px-9 pt-4">
+          <Stepper steps={data} />
+        </div>
         <div className="absolute bottom-4 px-5 w-full">
           <div className="relative w-full flex">
             <input
