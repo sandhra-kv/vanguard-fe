@@ -17,7 +17,7 @@ const Learning = () => {
     try {
       const resp = await apiCall({
         method: "GET",
-        url: `/chats/threads`,
+        url: `/chats/threads?subjectId=learning`,
         data: {},
       });
 
@@ -44,8 +44,7 @@ const Learning = () => {
       const resp = await getThreads();
 
       if (resp) {
-        console.log(resp);
-        setThread(resp);
+        setThread(resp?.records[0]?.id);
       }
     })();
   }, []);

@@ -15,14 +15,17 @@ const Dashboard = () => {
   const [lead, setLead] = useState(null);
   const [leads, setLeads] = useState(null);
 
-  const openModal = () => setShowModal(true);
+  const openModal = (type) => {
+    console.log(type);
+    setShowModal(true);
+  };
 
   const getData = async () => {
     try {
       const resp = await apiCall({
         method: "GET",
         url: `/campaign/leads`,
-        data: {}
+        data: {},
       });
 
       return resp;
