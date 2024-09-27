@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import SidePane from "./SidePane";
 import Stepper from "./Stepper";
 import Tab from "./Tab";
@@ -10,28 +10,9 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
   const [search, setSearch] = useState("");
   const [selectedTab, setSelectedTab] = useState("Activity Log");
   const [data, setData] = useState([]);
+  const [thread, setThread] = useState("");
 
-
-  const steps = [
-    {
-      isUser: true,
-      username: "Jonathon Johns",
-      timestamp: "7:43 pm",
-      description: "Set a meeting for the 15th of September, 3:00 pm",
-    },
-    {
-      isUser: false,
-      username: "Salesgenie",
-      description:
-        "Sure, I have scheduled a meeting for 30 minutes with @Analese Jonathon on 09/15/24 at 3:00 pm IST. Sure, I have scheduled a meeting for 30 minutes with @Analese Jonathon on 09/15/24 at 3:00 pm IST.",
-    },
-    {
-      isUser: true,
-      username: "Jonathon Johns",
-      timestamp: "7:46 pm",
-      description: "Thank you, please send me a recording lorem ipsum.",
-    },
-  ];
+  const intervalId = useRef(null);
 
   const sendMessage = () => {
     if (search.trim().length) console.log(search);
@@ -66,16 +47,27 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
   };
 
   useEffect(() => {
+    if (thread)
+      intervalId.current = setInterval(async () => {
+        const res = await getChat(thread);
+        if (res?.records) setData(res?.records);
+      }, 1000);
+
+    return () => {
+      clearInterval(intervalId.current);
+      console.log("cleared");
+    };
+  }, [thread]);
+
+  useEffect(() => {
     (async () => {
-      if(lead?.id){
+      if (lead?.id) {
         const resp = await getData();
 
         console.log(resp.records?.[0]?.id);
 
         if (resp.records?.[0]?.id) {
-          const res = await getChat(resp.records?.[0]?.id);
-          if(res?.records)
-          setData(res?.records)
+          setThread(resp.records?.[0]?.id);
         }
       }
     })();

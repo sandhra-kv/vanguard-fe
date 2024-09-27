@@ -1,10 +1,13 @@
 import { docLinks, videoLinks } from "../constants/dummyData";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { apiCall } from "../services/axios";
 import pdf_icon from "../assets/pdfIcon.svg";
 
 const Learning = () => {
   const [search, setSearch] = useState("");
+  const [threadId, setThread] = useState("");
+
+  const intervalId = useRef(null);
 
   const sendMessage = () => {
     if (search) console.log(search);
@@ -25,17 +28,27 @@ const Learning = () => {
   };
 
   useEffect(() => {
+    if (threadId)
+      intervalId.current = setInterval(() => {
+        console.log("polling");
+      }, 1000);
+
+    return () => {
+      clearInterval(intervalId.current);
+      console.log("cleared");
+    };
+  }, [threadId]);
+
+  useEffect(() => {
     (async () => {
       const resp = await getThreads();
 
       if (resp) {
         console.log(resp);
-        setInterval(() => {
-          console.log(resp);
-        }, 1000);
+        setThread(resp);
       }
     })();
-  });
+  }, []);
 
   return (
     <div className="flex p-5 h-full">
