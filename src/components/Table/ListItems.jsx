@@ -29,7 +29,7 @@ const ListItems = ({ data, header }) => {
                   {header.map((field, index) => (
                      <th
                         key={index}
-                        className={cx("px-7 py-3 text-left font-medium hover:cursor-pointer")}
+                        className={cx("px-6 py-3 text-left font-medium hover:cursor-pointer")}
                         onClick={() => {
                            setAscending(!isAscending);
                            setSortedField(field.key);
@@ -41,20 +41,20 @@ const ListItems = ({ data, header }) => {
                   <th></th>
                </tr>
             </thead>
-            <tbody className="divide-y-2  bg-white">
+            <tbody className="divide-y  bg-white">
                {sortedData.map((field) => (
                   <tr key={field.id} className=" text-sm">
-                     {/* <td className="pl-6 py-6 w-0.5">
+                     {/* <td className="pl-6 py-5 w-0.5">
                         <input type="checkbox" />
                      </td> */}
-                     <td className="px-6 py-6">{field.name}</td>
-                     <td className="px-6 py-6">{field.email}</td>
-                     <td className="px-6 py-6">{field.company}</td>
-                     <td className="px-6 py-6">{field.job_title}</td>
-                     <td className="px-6 py-6">
+                     <td className="px-6 py-5">{field.name}</td>
+                     <td className="px-6 py-5">{field.email}</td>
+                     <td className="px-6 py-5">{field.company}</td>
+                     <td className="px-6 py-5">{field.job_title}</td>
+                     <td className="px-6 py-5">
                         <StatusFlag status={field.status} />
                      </td>
-                     <td className="py-4 pr-6">
+                     <td className="py-3 pr-6">
                         <button className="border px-3 py-2 rounded-lg"><img src={actionButton} alt="edit or delete"/></button>
                      </td>
                   </tr>

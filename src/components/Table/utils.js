@@ -1,5 +1,4 @@
 export const getStatusStyle = (status) => {
-
    switch (status) {
       case "Luke Warm":
          return "w-fit py-1 px-2 rounded-xl text-[#026AA2] bg-[#F0F9FF]";
@@ -13,3 +12,5 @@ export const getStatusStyle = (status) => {
          return "";
    }
 };
+
+export const PAGE_COUNT = 9;
