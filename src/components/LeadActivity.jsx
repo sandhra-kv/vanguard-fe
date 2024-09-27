@@ -3,7 +3,6 @@ import SidePane from "./SidePane";
 import Stepper from "./Stepper";
 import Tab from "./Tab";
 import ActivityInsights from "./ActivityInsights";
-import { getStatus } from "../utils/common";
 import StatusFlag from "./Table/components/StatusFlag";
 
 const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
