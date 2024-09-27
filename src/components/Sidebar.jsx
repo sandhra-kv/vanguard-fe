@@ -48,8 +48,8 @@ const Sidebar = () => {
           <div className="absolute bottom-0 right-0.5 size-2.5 shrink-0 bg-[#04802E] rounded-full border border-white" />
         </div>
         <div className="mt-1 pl-3 text-sm">
-          <div className="font-semibold">David Fayemi</div>
-          <div className="text-[#475367]">david@rayna.ui</div>
+          <div className="font-semibold">Ram Rao</div>
+          <div className="text-[#475367]">ramrao@rayna.ui</div>
         </div>
         <img
           className="pl-5 cursor-pointer"
