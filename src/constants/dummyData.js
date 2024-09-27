@@ -390,7 +390,71 @@ export const TimelineData = [
   },
 ];
 export const horizontalChartData = [
-   { name: "Muhammadali", averageQuestions: 15 },
-   { name: "Sienna", averageQuestions: 20 },
-   { name: "Andrew", averageQuestions: 25 }
- ];
+{ name: "Muhammadali", averageQuestions: 15 },
+{ name: "Sienna", averageQuestions: 20 },
+{ name: "Andrew", averageQuestions: 25 }
+];
+
+export const leaderBoardHeaders = [
+  { key: "name", label: "Rep Name" },
+  { key: "talktime", label: "Talktime %" },
+  { key: "engagement", label: "Engagement %" },
+  { key: "meatingsConducted", label: "Meetings Conducted" },
+  { key: "nextSteps", label: "Next Steps rate" },
+  { key: "dealProbability", label: "Deal Probability Score" },
+];
+
+export const leaderBoardData = [
+  {
+    name: "John Doe",
+    talktime: "35%",
+    engagement: "75%",
+    meatingsConducted: "12",
+    nextSteps: "4.2",
+    dealProbability: "82%",
+  },
+  {
+    name: "Jane Smith",
+    talktime: "28%",
+    engagement: "68%",
+    meatingsConducted: "14",
+    nextSteps: "4.4",
+    dealProbability: "75%",
+  },
+  {
+    name: "Bob Johnson",
+    talktime: "45%",
+    engagement: "72%",
+    meatingsConducted: "10",
+    nextSteps: "3.8",
+    dealProbability: "62%",
+  },
+];
+
+export const accountabilityHeader = [
+  { key: "name", label: "Rep Name" },
+  { key: "nextSteps", label: "Next Steps rate" },
+  { key: "score", label: "Clarity Score" },
+  { key: "timeline", label: "Follow-up Timelines" },
+];
+
+export const accountabilityData = [
+  {
+    name: "Muhammed Ali",
+    nextSteps: "4.2",
+    score: "85%",
+    timeline: "One Time",
+  },
+  {
+    name: "Sienna",
+    nextSteps: "3.5",
+    score: "92%",
+    timeline: "Early",
+  },
+  {
+    name: "Andrew",
+    nextSteps: "4.8",
+    score: "78%",
+    timeline: "Late",
+  },
+];

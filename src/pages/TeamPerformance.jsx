@@ -6,6 +6,14 @@ import { horizontalChartData } from "../constants/dummyData";
 import ExcitementLevelChart from "../components/charts/ExcitementLevelChart";
 import PipelineVelocity from "../components/charts/PipelineVelocity";
 import PieChart from "../components/charts/PieChart";
+import List from "../components/List";
+import {
+  leaderBoardHeaders,
+  leaderBoardData,
+  accountabilityHeader,
+  accountabilityData
+} from "../constants/dummyData";
+import BarChart from "../components/charts/BarChart";
 
 const TeamPerformance = () => {
   return (
@@ -44,15 +52,20 @@ const TeamPerformance = () => {
           </div>
         </div>
       </div>
-      <p className="text-xl font-semibold pt-5">Team Leaderboard</p>
+      <p className="text-xl font-semibold pt-5 pb-4">Team Leaderboard</p>
+      <List headers={leaderBoardHeaders} data={leaderBoardData} />
       <p className="text-xl font-semibold pt-5">
         Aggregated Team Communication Insights
       </p>
       <div className="flex w-full gap-4 mt-5">
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">Talktime Percentage</p>
           <TeamCommunicationChart />
         </div>
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">
+            Average Questions per Meeting
+          </p>
           <HorizontalBarChart data={horizontalChartData} />
         </div>
       </div>
@@ -61,9 +74,13 @@ const TeamPerformance = () => {
       </p>
       <div className="flex w-full gap-4 mt-5">
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">Engagement Percentage</p>
           <EngagementChart />
         </div>
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">
+            Excitement Levels Over Time
+          </p>
           <ExcitementLevelChart />
         </div>
       </div>
@@ -72,9 +89,11 @@ const TeamPerformance = () => {
       </p>
       <div className="flex w-full gap-4 mt-5">
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">Meeting Times</p>
           <MeetingVolumeAndTimeEfficiencyChart />
         </div>
         <div className="w-1/2 h-[430px]">
+          <p className="text-base font-semibold pb-4">Pipeline Velocity</p>
           <PipelineVelocity />
         </div>
       </div>
@@ -83,10 +102,25 @@ const TeamPerformance = () => {
       </p>
       <div className="flex w-full gap-4 mt-5">
         <div className="w-1/3 h-[430px]">
+          <p className="text-base font-semibold pb-4">Most discussed Topics</p>
           <PieChart />
         </div>
         <div className="w-1/3 h-[430px]">
-          <PieChart />
+        <p className="text-base font-semibold pb-4">Topic frequency by Rep</p>
+          <BarChart />
+        </div>
+      </div>
+      <p className="text-xl font-semibold pt-5 pb-4">
+        Next Steps & Accountability
+      </p>
+      <div className="flex gap-3">
+        <div className="w-full">
+          <p className="text-base font-semibold pb-4">Accountability Metrix</p>
+          <List headers={accountabilityHeader} data={accountabilityData} />
+        </div>
+        <div className="w-full">
+          <p className="text-base font-semibold pb-4">Upcoming Deadlines</p>
+          <List headers={accountabilityHeader} data={accountabilityData} />
         </div>
       </div>
     </div>
