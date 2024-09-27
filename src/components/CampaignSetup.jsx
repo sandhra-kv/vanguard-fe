@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { CollapsibleMenu } from "./CollapsibleMenu";
 import OptionSelector from "./OptionSelector";
 import SelectLeadResources from "./SelectLeadSources";
-import OptionSelector from "./OptionSelector";
-import SelectLeadResources from "./SelectLeadSources";
 import SetupTriggers from "./SetupTrigger";
 import Review from "./Review";
 
