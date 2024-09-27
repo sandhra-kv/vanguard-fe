@@ -2,7 +2,7 @@ import EngagementChart from "../components/charts/EngagementChart";
 import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEfficiency";
 import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
 import HorizontalBarChart from "../components/charts/HorizontalBarChart";
-import { horizontalChartData } from "../constants/dummyData";
+import { competitorData, competitorHeader, horizontalChartData } from "../constants/dummyData";
 import ExcitementLevelChart from "../components/charts/ExcitementLevelChart";
 import PipelineVelocity from "../components/charts/PipelineVelocity";
 import PieChart from "../components/charts/PieChart";
@@ -106,8 +106,12 @@ const TeamPerformance = () => {
           <PieChart />
         </div>
         <div className="w-1/3 h-[430px]">
-        <p className="text-base font-semibold pb-4">Topic frequency by Rep</p>
+          <p className="text-base font-semibold pb-4">Topic frequency by Rep</p>
           <BarChart />
+        </div>
+        <div className="w-1/3 h-[430px]">
+          <p className="text-base font-semibold pb-4">Competitor Mentions</p>
+          <List headers={competitorHeader} data={competitorData} />
         </div>
       </div>
       <p className="text-xl font-semibold pt-5 pb-4">

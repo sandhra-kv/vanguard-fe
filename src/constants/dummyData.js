@@ -4,7 +4,7 @@ export const header = [
   { key: "job_title", label: "Job Title" },
   { key: "location", label: "Location" },
   { key: "score", label: "Score" },
-  { key: "status", label: "Status" },
+  { key: "status", label: "Status" }
 ];
 export const rows = [
   {
@@ -13,7 +13,7 @@ export const rows = [
     email: "alice.johnson@example.com",
     company: "Tech Innovations Inc.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const rows = [
     email: "bob.smith@example.com",
     company: "Global Solutions Ltd.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const rows = [
     email: "carol.davis@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const rows = [
     email: "david.lee@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const rows = [
     email: "eva.chen@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ export const rows = [
     email: "frank.wilson@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 7,
@@ -61,7 +61,7 @@ export const rows = [
     email: "grace.kim@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const rows = [
     email: "henry.taylor@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ export const rows = [
     email: "isabella.martinez@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 10,
@@ -85,7 +85,7 @@ export const rows = [
     email: "jack.brown@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 11,
@@ -93,7 +93,7 @@ export const rows = [
     email: "katherine.white@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 12,
@@ -101,7 +101,7 @@ export const rows = [
     email: "liam.anderson@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 13,
@@ -109,7 +109,7 @@ export const rows = [
     email: "mia.lewis@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 14,
@@ -117,7 +117,7 @@ export const rows = [
     email: "nathan.young@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 15,
@@ -125,7 +125,7 @@ export const rows = [
     email: "olivia.hall@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 16,
@@ -133,7 +133,7 @@ export const rows = [
     email: "paul.king@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 17,
@@ -141,7 +141,7 @@ export const rows = [
     email: "quinn.wright@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 18,
@@ -149,7 +149,7 @@ export const rows = [
     email: "rita.scott@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 19,
@@ -157,7 +157,7 @@ export const rows = [
     email: "sam.harris@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 20,
@@ -165,7 +165,7 @@ export const rows = [
     email: "tina.clark@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 21,
@@ -173,7 +173,7 @@ export const rows = [
     email: "ulysses.rodriguez@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 22,
@@ -181,7 +181,7 @@ export const rows = [
     email: "victoria.green@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 23,
@@ -189,7 +189,7 @@ export const rows = [
     email: "william.lee@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 24,
@@ -197,7 +197,7 @@ export const rows = [
     email: "xena.lopez@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 25,
@@ -205,7 +205,7 @@ export const rows = [
     email: "yara.kim@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 26,
@@ -213,7 +213,7 @@ export const rows = [
     email: "paul.king@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 27,
@@ -221,7 +221,7 @@ export const rows = [
     email: "quinn.wright@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 28,
@@ -229,7 +229,7 @@ export const rows = [
     email: "rita.scott@example.com",
     company: "Marketing Gurus",
     job_title: "Sales Agent",
-    status: "Luke Warm",
+    status: "Luke Warm"
   },
   {
     id: 29,
@@ -237,7 +237,7 @@ export const rows = [
     email: "sam.harris@example.com",
     company: "Finance Experts Co.",
     job_title: "CEO",
-    status: "Cold",
+    status: "Cold"
   },
   {
     id: 30,
@@ -245,7 +245,7 @@ export const rows = [
     email: "tina.clark@example.com",
     company: "Creative Solutions",
     job_title: "Sales Agent",
-    status: "Hot",
+    status: "Hot"
   },
   {
     id: 31,
@@ -253,7 +253,7 @@ export const rows = [
     email: "ulysses.rodriguez@example.com",
     company: "Tech Innovations Inc.",
     job_title: "Sales Agent",
-    status: "Warm",
+    status: "Warm"
   },
   {
     id: 32,
@@ -261,8 +261,8 @@ export const rows = [
     email: "victoria.green@example.com",
     company: "Global Solutions Ltd.",
     job_title: "CEO",
-    status: "Hot",
-  },
+    status: "Hot"
+  }
 ];
 export const tabs = ["Meetings", "Activity Logs", "Insights"];
 
@@ -270,28 +270,28 @@ export const engagementHistory = [
   {
     id: 1,
     text: "Meeting ‘Sync with Analese’ set up by Jonathon Johns",
-    date: "April 26, 2024 at 08.30AM",
+    date: "April 26, 2024 at 08.30AM"
   },
   {
     id: 2,
     text: "Lead information updated by Jonathon Johns",
-    date: "March 12, 2024 at 10.30AM",
+    date: "March 12, 2024 at 10.30AM"
   },
   {
     id: 3,
     text: "Follow-up mail sent by Analese Jonathon",
-    date: "February 5, 2024 at 09.32AM",
+    date: "February 5, 2024 at 09.32AM"
   },
   {
     id: 4,
     text: "Meeting declined by Analese Jonathon",
-    date: "January 6, 2024 at 14.30PM",
+    date: "January 6, 2024 at 14.30PM"
   },
   {
     id: 5,
     text: "Meeting ‘Sync with Analese’ set up by Jonathon Johns",
-    date: "January 2, 2024 at 14.30PM",
-  },
+    date: "January 2, 2024 at 14.30PM"
+  }
 ];
 
 export const timeRanges = [
@@ -300,7 +300,7 @@ export const timeRanges = [
   { startTime: 7, endTime: 9 },
   { startTime: 10, endTime: 30 },
   { startTime: 50, endTime: 70 },
-  { startTime: 80, endTime: 100 },
+  { startTime: 80, endTime: 100 }
 ];
 
 export const TimelineData = [
@@ -313,8 +313,8 @@ export const TimelineData = [
       { startTime: 5, endTime: 6 },
       { startTime: 7, endTime: 9 },
       { startTime: 10, endTime: 30 },
-      { startTime: 50, endTime: 70 },
-    ],
+      { startTime: 50, endTime: 70 }
+    ]
   },
   {
     name: "Jane Smith",
@@ -325,8 +325,8 @@ export const TimelineData = [
       { startTime: 15, endTime: 16 },
       { startTime: 17, endTime: 19 },
       { startTime: 20, endTime: 40 },
-      { startTime: 60, endTime: 80 },
-    ],
+      { startTime: 60, endTime: 80 }
+    ]
   },
   {
     name: "Alice Johnson",
@@ -337,8 +337,8 @@ export const TimelineData = [
       { startTime: 25, endTime: 26 },
       { startTime: 27, endTime: 29 },
       { startTime: 30, endTime: 50 },
-      { startTime: 70, endTime: 90 },
-    ],
+      { startTime: 70, endTime: 90 }
+    ]
   },
   {
     name: "Bob Brown",
@@ -349,8 +349,8 @@ export const TimelineData = [
       { startTime: 35, endTime: 36 },
       { startTime: 37, endTime: 39 },
       { startTime: 40, endTime: 60 },
-      { startTime: 70, endTime: 100 },
-    ],
+      { startTime: 70, endTime: 100 }
+    ]
   },
   {
     name: "Charlie Davis",
@@ -361,8 +361,8 @@ export const TimelineData = [
       { startTime: 45, endTime: 46 },
       { startTime: 47, endTime: 49 },
       { startTime: 50, endTime: 70 },
-      { startTime: 80, endTime: 120 },
-    ],
+      { startTime: 80, endTime: 120 }
+    ]
   },
   {
     name: "Diana Prince",
@@ -373,8 +373,8 @@ export const TimelineData = [
       { startTime: 55, endTime: 56 },
       { startTime: 57, endTime: 59 },
       { startTime: 60, endTime: 80 },
-      { startTime: 90, endTime: 130 },
-    ],
+      { startTime: 90, endTime: 130 }
+    ]
   },
   {
     name: "Ethan Hunt",
@@ -385,14 +385,14 @@ export const TimelineData = [
       { startTime: 65, endTime: 66 },
       { startTime: 67, endTime: 69 },
       { startTime: 70, endTime: 90 },
-      { startTime: 100, endTime: 140 },
-    ],
-  },
+      { startTime: 100, endTime: 140 }
+    ]
+  }
 ];
 export const horizontalChartData = [
-{ name: "Muhammadali", averageQuestions: 15 },
-{ name: "Sienna", averageQuestions: 20 },
-{ name: "Andrew", averageQuestions: 25 }
+  { name: "Muhammadali", averageQuestions: 15 },
+  { name: "Sienna", averageQuestions: 20 },
+  { name: "Andrew", averageQuestions: 25 }
 ];
 
 export const leaderBoardHeaders = [
@@ -401,7 +401,7 @@ export const leaderBoardHeaders = [
   { key: "engagement", label: "Engagement %" },
   { key: "meatingsConducted", label: "Meetings Conducted" },
   { key: "nextSteps", label: "Next Steps rate" },
-  { key: "dealProbability", label: "Deal Probability Score" },
+  { key: "dealProbability", label: "Deal Probability Score" }
 ];
 
 export const leaderBoardData = [
@@ -411,7 +411,7 @@ export const leaderBoardData = [
     engagement: "75%",
     meatingsConducted: "12",
     nextSteps: "4.2",
-    dealProbability: "82%",
+    dealProbability: "82%"
   },
   {
     name: "Jane Smith",
@@ -419,7 +419,7 @@ export const leaderBoardData = [
     engagement: "68%",
     meatingsConducted: "14",
     nextSteps: "4.4",
-    dealProbability: "75%",
+    dealProbability: "75%"
   },
   {
     name: "Bob Johnson",
@@ -427,15 +427,15 @@ export const leaderBoardData = [
     engagement: "72%",
     meatingsConducted: "10",
     nextSteps: "3.8",
-    dealProbability: "62%",
-  },
+    dealProbability: "62%"
+  }
 ];
 
 export const accountabilityHeader = [
   { key: "name", label: "Rep Name" },
   { key: "nextSteps", label: "Next Steps rate" },
   { key: "score", label: "Clarity Score" },
-  { key: "timeline", label: "Follow-up Timelines" },
+  { key: "timeline", label: "Follow-up Timelines" }
 ];
 
 export const accountabilityData = [
@@ -443,18 +443,46 @@ export const accountabilityData = [
     name: "Muhammed Ali",
     nextSteps: "4.2",
     score: "85%",
-    timeline: "One Time",
+    timeline: "One Time"
   },
   {
     name: "Sienna",
     nextSteps: "3.5",
     score: "92%",
-    timeline: "Early",
+    timeline: "Early"
   },
   {
     name: "Andrew",
     nextSteps: "4.8",
     score: "78%",
-    timeline: "Late",
+    timeline: "Late"
+  }
+];
+
+export const competitorHeader = [
+  { key: "name", label: "Rep Name" },
+  { key: "competitor", label: "Competitor" },
+  { key: "mentions", label: "Mentions" },
+  { key: "suggestions", label: "Suggestions" }
+];
+
+export const competitorData = [
+  {
+    name: "Muhammed Ali",
+    competitor: "Competitor X",
+    mentions: 5,
+    suggestions: "Focus on Y feature"
   },
+  {
+    name: "Sienna",
+    competitor: "Competitor Y",
+    mentions: 3,
+    suggestions: "Highlight Z advantage"
+  },
+  {
+    name: "Andrew",
+    competitor: "Competitor Z",
+    mentions: 4,
+    suggestions: "Emphasize A capability"
+  }
 ];
