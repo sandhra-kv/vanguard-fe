@@ -18,5 +18,11 @@ export const navbarOptions = [
     label: "Profile",
     path: "/profile",
     icon: HomeIcon
+  },
+  {
+    id: "team-performance",
+    label: "Team Performance",
+    path: "/team-performance",
+    icon: HomeIcon
   }
 ];
