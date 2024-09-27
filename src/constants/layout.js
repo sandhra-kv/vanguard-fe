@@ -8,12 +8,6 @@ export const navbarOptions = [
     icon: HomeIcon
   },
   {
-    id: "appointments",
-    label: "Appointments",
-    path: "/appointments",
-    icon: HomeIcon
-  },
-  {
     id: "profile",
     label: "Profile",
     path: "/profile",
