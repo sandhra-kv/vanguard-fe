@@ -40,7 +40,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div>
+    <div className="p-5">
       <MeetingDetails
         showModal={showModal}
         closeModal={closeModal}

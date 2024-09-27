@@ -12,7 +12,7 @@ const Layout = () => {
         <div className="h-16">
           <Header />
         </div>
-        <main className="p-4 flex-1 bg-[#F9FAFB] h-full overflow-y-auto">
+        <main className="flex-1 bg-[#F9FAFB] h-full overflow-y-auto">
           <Outlet />
         </main>
       </div>
