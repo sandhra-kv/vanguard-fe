@@ -1,23 +1,37 @@
 import Table from "../components/Table";
 import { header, rows } from "../constants/dummyData";
+import React, { useEffect } from "react";
+import { apiCall } from "../services/axios";
+import Button from "../components/Button";
 
 const Dashboard = () => {
-   //  const [showModal, setShowModal] = useState(false);
+  const getData = async () => {
+    try {
+      const resp = await apiCall({
+        method: "GET",
+        url: `/users`,
+        data: {},
+      });
 
-   //  const openModal = () => {
-   //     setShowModal(true);
-   //  };
-   //  const closeModal = () => {
-   //     setShowModal(false);
-   //  };
+      return resp;
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
-   return (
-      <div>
-         {/* <div className="flex flex-row gap-2">
-      <Button onClick={openModal} label="Download" variant="secondary" />
-      <Button onClick={openModal} label="Create Campaigns" variant="primary" icon="/icons/rounded-plus.svg" />
-      </div>
-      <MeetingDetails
+  useEffect(() => {
+    (async () => {
+      const resp = await getData();
+
+      if (resp) {
+        console.log(resp);
+      }
+    })();
+  }, []);
+
+  return (
+    <div>
+      {/* <MeetingDetails
         showModal={showModal}
         closeModal={closeModal}
         name="Analese Jonathen"
@@ -25,10 +39,26 @@ const Dashboard = () => {
         duration="3 hours 57 minutes"
         videoSrc="https://www.w3schools.com/html/mov_bbb.mp4" /> */}
 
-         <h1 className="text-2xl font-medium">Hot leads</h1>
-         <Table header={header} rows={rows} />
+      <div className="flex justify-between my-3">
+        <h1 className="text-2xl font-medium">Hot leads</h1>
+        <div className="flex flex-row gap-3">
+          <Button
+            onClick={() => {}}
+            label="Export CSV"
+            variant="secondary"
+            icon="/icons/download.svg"
+          />
+          <Button
+            onClick={() => {}}
+            label="Create Campaigns"
+            variant="primary"
+            icon="/icons/rounded-plus.svg"
+          />
+        </div>
       </div>
-   );
+      <Table header={header} rows={rows} />
+    </div>
+  );
 };
 
 export default Dashboard;
