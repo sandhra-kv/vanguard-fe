@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Table from "../components/Table";
+import { header, rows } from "../constants/dummyData";
 import Button from "../components/Button";
 import MeetingDetails from "../components/MeetingDetailsModal";
 
@@ -39,6 +39,12 @@ const Dashboard = () => {
         videoSrc="https://www.w3schools.com/html/mov_bbb.mp4" /> */}
     </div>
   );
+   return (
+      <div>
+         <h1 className="text-2xl font-medium">Hot leads</h1>
+         <Table header={header} rows={rows} />
+      </div>
+   );
 };
 
 export default Dashboard;
