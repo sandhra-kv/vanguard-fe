@@ -181,9 +181,9 @@ const ProfilePage = () => {
       </div>
       <div className="flex flex-row gap-10">
         <Profile
-          name="David Fayem"
-          email="david@rayna.ui"
-          url="david@rayna.ui"
+          name="Ram Rao"
+          email="ramrao@rayna.ui"
+          url="ramrao@rayna.ui"
           phone="08168141116"
           date="Friday, Sept 25, 2025"
         />
