@@ -389,3 +389,12 @@ export const TimelineData = [
     ],
   },
 ];
+export const horizontalChartData = [
+   { name: "John Doe", averageQuestions: 15 },
+   { name: "Jane Smith", averageQuestions: 20 },
+   { name: "Alice Johnson", averageQuestions: 25 },
+   { name: "Bob Brown", averageQuestions: 18 },
+   { name: "Charlie Davis", averageQuestions: 30 },
+   { name: "Diana Prince", averageQuestions: 22 },
+   { name: "Ethan Hunt", averageQuestions: 28 },
+ ];
