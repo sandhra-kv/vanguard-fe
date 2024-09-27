@@ -12,5 +12,11 @@ export const navbarOptions = [
     label: "Appointments",
     path: "/appointments",
     icon: HomeIcon
+  },
+  {
+    id: "profile",
+    label: "Profile",
+    path: "/profile",
+    icon: HomeIcon
   }
 ];
