@@ -52,6 +52,7 @@ const Learning = () => {
   return (
     <div className="flex p-5 h-full">
       <section className="flex flex-col h-[calc(100vh-85px)] overflow-y-auto gap-4">
+      <h1 className="text-2xl font-semibold">Learning</h1>
         <h1 className="text-lg font-lg">Level-up your Skills</h1>
         <div className="flex flex-wrap gap-3">
           {videoLinks.map((embedId) => {

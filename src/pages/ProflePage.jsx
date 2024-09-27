@@ -175,7 +175,7 @@ const ProfilePage = () => {
             onClick={() => {}}
             label="Select dates"
             variant="secondary"
-            icon="/icons/download.svg"
+            icon="/icons/calendar.svg"
           />
         </div>
       </div>
