@@ -5,6 +5,7 @@ import VideoPlayer from "./VideoPlayer";
 import Tab from "./Tab";
 import { formatISODate } from "../utils/common";
 import ModalAnalytics from "./ModalAnalytics";
+import { TimelineData } from "../constants/dummyData";
 
 const MeetingDetails = ({ showModal, closeModal, name, date, duration, videoSrc }) => {
    const content = "<p>Hello <strong>World</strong>!</p>";
@@ -38,7 +39,7 @@ const MeetingDetails = ({ showModal, closeModal, name, date, duration, videoSrc 
                      {selectedTab === "Summary" && (
                         <div dangerouslySetInnerHTML={{ __html: content }} className="p-6" />
                      )}
-                     {selectedTab === "Analytics" && <ModalAnalytics />}
+                     {selectedTab === "Analytics" && <ModalAnalytics timelineData={TimelineData}/>}
                   </div>
                </div>
                {/* TODO: Replace with the chat component */}

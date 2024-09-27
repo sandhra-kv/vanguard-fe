@@ -31,15 +31,7 @@ const Dashboard = () => {
    useEffect(() => {
       (async () => {
          const resp = await getData();
-   useEffect(() => {
-      (async () => {
-         const resp = await getData();
 
-         if (resp) {
-            console.log(resp);
-         }
-      })();
-   }, []);
          if (resp) {
             console.log(resp);
          }
@@ -65,7 +57,7 @@ const Dashboard = () => {
             </div>
          </div>
          <Table header={header} rows={rows} onSelect={setLead} />
-         <LeadActivity isOpen={!!lead} lead={lead} onClose={() => setLead(null)} openModal={openModal}/>
+         <LeadActivity isOpen={!!lead} lead={lead} onClose={() => setLead(null)} openModal={openModal} />
       </div>
    );
 };

@@ -268,30 +268,30 @@ export const tabs = ["Meetings", "Activity Logs", "Insights"];
 export const engagementHistory = [
    {
       id: 1,
-      text: 'Meeting ‘Sync with Analese’ set up by Jonathon Johns',
-      date: 'April 26, 2024 at 08.30AM'
+      text: "Meeting ‘Sync with Analese’ set up by Jonathon Johns",
+      date: "April 26, 2024 at 08.30AM",
    },
    {
       id: 2,
-      text: 'Lead information updated by Jonathon Johns',
-      date: 'March 12, 2024 at 10.30AM'
+      text: "Lead information updated by Jonathon Johns",
+      date: "March 12, 2024 at 10.30AM",
    },
    {
       id: 3,
-      text: 'Follow-up mail sent by Analese Jonathon',
-      date: 'February 5, 2024 at 09.32AM'
+      text: "Follow-up mail sent by Analese Jonathon",
+      date: "February 5, 2024 at 09.32AM",
    },
    {
       id: 4,
-      text: 'Meeting declined by Analese Jonathon',
-      date: 'January 6, 2024 at 14.30PM'
+      text: "Meeting declined by Analese Jonathon",
+      date: "January 6, 2024 at 14.30PM",
    },
    {
       id: 5,
-      text: 'Meeting ‘Sync with Analese’ set up by Jonathon Johns',
-      date: 'January 2, 2024 at 14.30PM'
-   }
-]
+      text: "Meeting ‘Sync with Analese’ set up by Jonathon Johns",
+      date: "January 2, 2024 at 14.30PM",
+   },
+];
 
 export const timeRanges = [
    { startTime: 0, endTime: 2 },
@@ -300,4 +300,91 @@ export const timeRanges = [
    { startTime: 10, endTime: 30 },
    { startTime: 50, endTime: 70 },
    { startTime: 80, endTime: 100 },
+];
+
+export const TimelineData = [
+   {
+      name: "John Doe",
+      email: "john@example.com",
+      totalDuration: 100,
+      timeRanges: [
+         { startTime: 0, endTime: 2 },
+         { startTime: 5, endTime: 6 },
+         { startTime: 7, endTime: 9 },
+         { startTime: 10, endTime: 30 },
+         { startTime: 50, endTime: 70 },
+      ],
+   },
+   {
+      name: "Jane Smith",
+      email: "jane@example.com",
+      totalDuration: 80,
+      timeRanges: [
+         { startTime: 10, endTime: 12 },
+         { startTime: 15, endTime: 16 },
+         { startTime: 17, endTime: 19 },
+         { startTime: 20, endTime: 40 },
+         { startTime: 60, endTime: 80 },
+      ],
+   },
+   {
+      name: "Alice Johnson",
+      email: "alice@example.com",
+      totalDuration: 93,
+      timeRanges: [
+         { startTime: 20, endTime: 22 },
+         { startTime: 25, endTime: 26 },
+         { startTime: 27, endTime: 29 },
+         { startTime: 30, endTime: 50 },
+         { startTime: 70, endTime: 90 },
+      ],
+   },
+   {
+      name: "Bob Brown",
+      email: "bob@example.com",
+      totalDuration: 100,
+      timeRanges: [
+         { startTime: 30, endTime: 32 },
+         { startTime: 35, endTime: 36 },
+         { startTime: 37, endTime: 39 },
+         { startTime: 40, endTime: 60 },
+         { startTime: 70, endTime: 100 },
+      ],
+   },
+   {
+      name: "Charlie Davis",
+      email: "charlie@example.com",
+      totalDuration: 150,
+      timeRanges: [
+         { startTime: 40, endTime: 42 },
+         { startTime: 45, endTime: 46 },
+         { startTime: 47, endTime: 49 },
+         { startTime: 50, endTime: 70 },
+         { startTime: 80, endTime: 120 },
+      ],
+   },
+   {
+      name: "Diana Prince",
+      email: "diana@example.com",
+      totalDuration: 100,
+      timeRanges: [
+         { startTime: 50, endTime: 52 },
+         { startTime: 55, endTime: 56 },
+         { startTime: 57, endTime: 59 },
+         { startTime: 60, endTime: 80 },
+         { startTime: 90, endTime: 130 },
+      ],
+   },
+   {
+      name: "Ethan Hunt",
+      email: "ethan@example.com",
+      totalDuration: 150,
+      timeRanges: [
+         { startTime: 60, endTime: 62 },
+         { startTime: 65, endTime: 66 },
+         { startTime: 67, endTime: 69 },
+         { startTime: 70, endTime: 90 },
+         { startTime: 100, endTime: 140 },
+      ],
+   },
 ];
