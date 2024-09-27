@@ -390,11 +390,47 @@ export const TimelineData = [
   },
 ];
 export const horizontalChartData = [
-   { name: "John Doe", averageQuestions: 15 },
-   { name: "Jane Smith", averageQuestions: 20 },
-   { name: "Alice Johnson", averageQuestions: 25 },
-   { name: "Bob Brown", averageQuestions: 18 },
-   { name: "Charlie Davis", averageQuestions: 30 },
-   { name: "Diana Prince", averageQuestions: 22 },
-   { name: "Ethan Hunt", averageQuestions: 28 },
- ];
+  { name: "John Doe", averageQuestions: 15 },
+  { name: "Jane Smith", averageQuestions: 20 },
+  { name: "Alice Johnson", averageQuestions: 25 },
+  { name: "Bob Brown", averageQuestions: 18 },
+  { name: "Charlie Davis", averageQuestions: 30 },
+  { name: "Diana Prince", averageQuestions: 22 },
+  { name: "Ethan Hunt", averageQuestions: 28 },
+];
+
+export const leaderBoardHeaders = [
+  { key: "name", label: "Rep Name" },
+  { key: "talktime", label: "Talktime %" },
+  { key: "engagement", label: "Engagement %" },
+  { key: "meatingsConducted", label: "Meetings Conducted" },
+  { key: "nextSteps", label: "Next Steps rate" },
+  { key: "dealProbability", label: "Deal Probability Score" },
+];
+
+export const leaderBoardData = [
+  {
+    name: "John Doe",
+    talktime: "35%",
+    engagement: "75%",
+    meatingsConducted: "12",
+    nextSteps: "4.2",
+    dealProbability: "82%",
+  },
+  {
+    name: "Jane Smith",
+    talktime: "28%",
+    engagement: "68%",
+    meatingsConducted: "14",
+    nextSteps: "4.4",
+    dealProbability: "75%",
+  },
+  {
+    name: "Bob Johnson",
+    talktime: "45%",
+    engagement: "72%",
+    meatingsConducted: "10",
+    nextSteps: "3.8",
+    dealProbability: "62%",
+  },
+];

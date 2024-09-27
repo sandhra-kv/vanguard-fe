@@ -3,6 +3,8 @@ import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEff
 import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
 import HorizontalBarChart from "../components/charts/HorizontalBarChart";
 import { horizontalChartData } from "../constants/dummyData";
+import List from "../components/List";
+import { leaderBoardHeaders, leaderBoardData } from "../constants/dummyData";
 
 const TeamPerformance = () => {
   return (
@@ -41,13 +43,14 @@ const TeamPerformance = () => {
           </div>
         </div>
       </div>
-      <p className="text-xl font-semibold pt-5">Team Leaderboard</p>
-    {/* <div class="w-[500px] h-[500px]">
-      <TeamCommunicationChart />
-      <EngagementChart />
-      <MeetingVolumeAndTimeEfficiencyChart />
-      <HorizontalBarChart data={horizontalChartData} />
-    </div> */}
+      <p className="text-xl font-semibold pt-5 pb-4">Team Leaderboard</p>
+      <List headers={leaderBoardHeaders} data={leaderBoardData} />
+      <p className="text-xl font-semibold pt-5 pb-4">
+        Next Steps & Accountability
+      </p>
+      <div className="flex gap-3">
+        <p className="text-base font-semibold pb-4">Accountability Metrix</p>
+      </div>
     </div>
   );
 };
