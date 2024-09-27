@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SidePane from "./SidePane";
 import Stepper from "./Stepper";
 import Tab from "./Tab";
 import ActivityInsights from "./ActivityInsights";
 import StatusFlag from "./Table/components/StatusFlag";
+import { apiCall } from "../services/axios";
 
 const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
   const [search, setSearch] = useState("");
   const [selectedTab, setSelectedTab] = useState("Activity Log");
+  const [data, setData] = useState([]);
+
 
   const steps = [
     {
@@ -33,6 +36,50 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
   const sendMessage = () => {
     if (search.trim().length) console.log(search);
   };
+
+  const getData = async () => {
+    try {
+      const resp = await apiCall({
+        method: "GET",
+        url: `/chats/threads?subjectId=${lead?.id}`,
+        data: {},
+      });
+
+      return resp;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getChat = async (id) => {
+    try {
+      const resp = await apiCall({
+        method: "GET",
+        url: `/chats/${id}`,
+        data: {},
+      });
+
+      return resp;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    (async () => {
+      if(lead?.id){
+        const resp = await getData();
+
+        console.log(resp.records?.[0]?.id);
+
+        if (resp.records?.[0]?.id) {
+          const res = await getChat(resp.records?.[0]?.id);
+          if(res?.records)
+          setData(res?.records)
+        }
+      }
+    })();
+  }, []);
 
   return (
     <SidePane className={className} isOpen={isOpen} onClose={onClose}>
@@ -66,7 +113,7 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose, openModal }) => {
         {selectedTab === "Activity Log" ? (
           <>
             <div className="h-[calc(100%-80px)] overflow-y-auto px-9 pt-4">
-              <Stepper steps={steps} openModal={openModal} />
+              <Stepper steps={data} openModal={openModal} />
             </div>
             <div className="absolute bottom-4 px-9 w-full">
               <div className="relative w-full flex">
