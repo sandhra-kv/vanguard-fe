@@ -8,7 +8,7 @@ const Sidebar = () => {
   const isSelected = (path) => location.pathname === path;
 
   return (
-    <div className="w-64 h-screen bg-white text-[#101928] border-r border-[#E4E7EC] flex flex-col pb-11">
+    <div className="w-64 h-screen bg-white text-[#101928] border-r border-[#E4E7EC] flex flex-col pb-11 fixed">
       <div className="pt-4 pl-6 text-3xl font-semibold text-[#414EC6]">
         Salesgenie
       </div>
