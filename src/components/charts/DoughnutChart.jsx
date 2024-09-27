@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const doughnutCenterLabel = {
+const doughnutCenterLabelPlugin = {
    id: "doughnutCenterLabel",
    beforeDraw: (chart) => {
       const {
@@ -22,7 +22,6 @@ const doughnutCenterLabel = {
    },
 };
 
-ChartJS.register(doughnutCenterLabel);
 
 const DoughnutChart = ({ value }) => {
    const chartData = {
@@ -54,7 +53,7 @@ const DoughnutChart = ({ value }) => {
 
    return (
       <div className="size-36">
-         <Doughnut data={chartData} options={chartOptions} width={144} height={144} />
+         <Doughnut data={chartData} options={chartOptions} plugins={[doughnutCenterLabelPlugin]} width={144} height={144} />
       </div>
    );
 };
