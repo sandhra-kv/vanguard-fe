@@ -1,5 +1,11 @@
-import { CategoryScale, Chart as ChartJs, BarElement, LinearScale } from "chart.js";
+import {
+  CategoryScale,
+  Chart as ChartJs,
+  BarElement,
+  LinearScale,
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
+import RadarChart from "../components/RadarChart";
 
 ChartJs.register(CategoryScale, LinearScale, BarElement);
 
@@ -10,9 +16,9 @@ const Appointments = () => {
     borderSkipped: false,
     layout: {
       padding: {
-        top: 30
-      }
-    }
+        top: 30,
+      },
+    },
     // plugins: {
     //   legend: {
     //     display: false
@@ -92,7 +98,7 @@ const Appointments = () => {
       "M Disclosure",
       "Provenance",
       "Reliability",
-      "Transparency"
+      "Transparency",
     ],
     datasets: [
       {
@@ -100,36 +106,106 @@ const Appointments = () => {
         backgroundColor: "pink",
         borderColor: "red",
         borderWidth: 1,
-        data: [3, 5, 6, 7, 3, 5, 6, 7]
+        data: [3, 5, 6, 7, 3, 5, 6, 7],
       },
       {
         label: "Mastercard",
         backgroundColor: "lightblue",
         borderColor: "blue",
         borderWidth: 1,
-        data: [4, 7, 3, 6, 10, 7, 4, 6]
+        data: [4, 7, 3, 6, 10, 7, 4, 6],
       },
       {
         label: "Paypal",
         backgroundColor: "lightgreen",
         borderColor: "green",
         borderWidth: 1,
-        data: [10, 7, 4, 6, 9, 7, 3, 10]
+        data: [10, 7, 4, 6, 9, 7, 3, 10],
       },
       {
         label: "Visa",
         backgroundColor: "yellow",
         borderColor: "orange",
         borderWidth: 1,
-        data: [6, 9, 7, 3, 10, 7, 4, 6]
-      }
-    ]
+        data: [6, 9, 7, 3, 10, 7, 4, 6],
+      },
+    ],
+  };
+
+  const radarChartData = {
+    labels: [
+      "Relationship Building",
+      "Time Management",
+      "Objection Handling",
+      "Negotiation",
+      "Closing Techniques",
+    ],
+    datasets: [
+      {
+        data: [50, 75, 91, 100, 50],
+        borderColor: "#505BC5",
+        backgroundColor: "rgba(80,91,197,0.25)",
+        borderWidth: 3,
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        pointBorderColor: "#FFFFFF",
+        pointBackgroundColor: "#000000",
+      },
+    ],
+  };
+
+  const radarChartOptions = {
+    maintainAspectRatio: false,
+    responsive: true,
+    scales: {
+      r: {
+        beginAtZero: true,
+        min: 0,
+        max: 100,
+        backgroundColor: "#D9DCFF",
+        angleLines: {
+          display: true,
+          lineWidth: 2,
+          color: "#FFFFFF",
+        },
+        grid: {
+          display: true,
+          lineWidth: 2,
+          color: "#FFFFFF",
+          circular: true,
+        },
+        ticks: {
+          display: true,
+          stepSize: 25,
+          color: "#505BC5",
+        },
+        pointLabels: {
+          font: {
+            size: 12,
+            weight: 500,
+            family: "Manrope",
+          },
+          color: "#3C3C3C",
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
   };
 
   return (
     <div>
       <div className="w-1/2 h-[280px]">
         <Bar options={options} data={data} />
+      </div>
+      <div className="w-1/2 h-[280px]">
+        <RadarChart
+          chartData={radarChartData}
+          chartOptions={radarChartOptions}
+        />
       </div>
     </div>
   );

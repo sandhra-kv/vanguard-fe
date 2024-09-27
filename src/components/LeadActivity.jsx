@@ -81,7 +81,7 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
         selectedTab={selectedTab}
         onSelect={setSelectedTab}
       />
-      <div className="h-[calc(100%-104px)] relative">
+      <div className="h-[calc(100%-145px)] relative">
         <div className="h-[calc(100%-250px)] overflow-y-auto px-9 pt-4">
           <Stepper steps={steps} />
         </div>
