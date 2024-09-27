@@ -264,3 +264,31 @@ export const rows = [
    },
  ];
 export const tabs = ["Meetings", "Activity Logs", "Insights"];
+
+export const engagementHistory = [
+   {
+      id: 1,
+      text: 'Meeting ‘Sync with Analese’ set up by Jonathon Johns',
+      date: 'April 26, 2024 at 08.30AM'
+   },
+   {
+      id: 2,
+      text: 'Lead information updated by Jonathon Johns',
+      date: 'March 12, 2024 at 10.30AM'
+   },
+   {
+      id: 3,
+      text: 'Follow-up mail sent by Analese Jonathon',
+      date: 'February 5, 2024 at 09.32AM'
+   },
+   {
+      id: 4,
+      text: 'Meeting declined by Analese Jonathon',
+      date: 'January 6, 2024 at 14.30PM'
+   },
+   {
+      id: 5,
+      text: 'Meeting ‘Sync with Analese’ set up by Jonathon Johns',
+      date: 'January 2, 2024 at 14.30PM'
+   }
+]
