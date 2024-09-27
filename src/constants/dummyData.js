@@ -434,3 +434,31 @@ export const leaderBoardData = [
     dealProbability: "62%",
   },
 ];
+
+export const accountabilityHeader = [
+  { key: "name", label: "Rep Name" },
+  { key: "nextSteps", label: "Next Steps rate" },
+  { key: "score", label: "Clarity Score" },
+  { key: "timeline", label: "Follow-up Timelines" },
+];
+
+export const accountabilityData = [
+  {
+    name: "Muhammed Ali",
+    nextSteps: "4.2",
+    score: "85%",
+    timeline: "One Time",
+  },
+  {
+    name: "Sienna",
+    nextSteps: "3.5",
+    score: "92%",
+    timeline: "Early",
+  },
+  {
+    name: "Andrew",
+    nextSteps: "4.8",
+    score: "78%",
+    timeline: "Late",
+  },
+];

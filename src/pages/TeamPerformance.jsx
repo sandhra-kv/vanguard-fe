@@ -4,7 +4,12 @@ import TeamCommunicationChart from "../components/charts/TeamCommunicationChart"
 import HorizontalBarChart from "../components/charts/HorizontalBarChart";
 import { horizontalChartData } from "../constants/dummyData";
 import List from "../components/List";
-import { leaderBoardHeaders, leaderBoardData } from "../constants/dummyData";
+import {
+  leaderBoardHeaders,
+  leaderBoardData,
+  accountabilityHeader,
+  accountabilityData,
+} from "../constants/dummyData";
 
 const TeamPerformance = () => {
   return (
@@ -49,7 +54,14 @@ const TeamPerformance = () => {
         Next Steps & Accountability
       </p>
       <div className="flex gap-3">
-        <p className="text-base font-semibold pb-4">Accountability Metrix</p>
+        <div className="w-full">
+          <p className="text-base font-semibold pb-4">Accountability Metrix</p>
+          <List headers={accountabilityHeader} data={accountabilityData} />
+        </div>
+        <div className="w-full">
+          <p className="text-base font-semibold pb-4">Upcoming Deadlines</p>
+          <List headers={accountabilityHeader} data={accountabilityData} />
+        </div>
       </div>
     </div>
   );
