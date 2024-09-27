@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CollapsibleMenu } from "./CollapsibleMenu";
 import OptionSelector from "./OptionSelector";
+import SelectLeadResources from "./SelectLeadSources";
 
 const CampaignSetup = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -51,6 +52,30 @@ const CampaignSetup = () => {
       </CollapsibleMenu>
 
       {/* Step 2: Select Lead Sources */}
+      <CollapsibleMenu
+        isFilterOpen={openSection === "lead_sources"}
+        renderLabel={() => (
+          <button
+            onClick={() => toggleSection("lead_sources")}
+            className={`flex w-full text-start items-center justify-between py-4 font-medium h-16 bg-white border-[#E4E7EC] p-4 mt-7 ${
+              openSection === "lead_sources"
+                ? "rounded-t-xl border-t border-l border-r"
+                : "rounded-xl border"
+            }`}
+          >
+            Select Lead Sources
+            <img
+              src="/icons/down.svg"
+              alt="arrow"
+              className={`size-3 ${
+                openSection === "lead_sources" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        )}
+      >
+        <SelectLeadResources />
+      </CollapsibleMenu>
 
       {/* Step:3 */}
       <CollapsibleMenu
@@ -78,12 +103,7 @@ const CampaignSetup = () => {
         <div className="w-full bg-white py-7 border border-[#E4E7EC] rounded-b-xl p-4">
           <OptionSelector
             onSelect={(option) => setSeq(option)}
-            options={[
-              "Add email",
-              "Add SMS",
-              "Add phone call",
-              "Add wait"
-            ]}
+            options={["Add email", "Add SMS", "Add phone call", "Add wait"]}
             selectedOption={seq}
           />
         </div>

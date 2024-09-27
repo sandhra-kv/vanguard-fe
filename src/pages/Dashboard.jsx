@@ -70,12 +70,14 @@ const Dashboard = () => {
         </div>
       </div>
       <Table header={header} rows={leads} onSelect={setLead} />
-      <LeadActivity
+      {!!lead && (
+        <LeadActivity
         isOpen={!!lead}
         lead={lead}
         onClose={() => setLead(null)}
         openModal={openModal}
       />
+      )}
     </div>
   );
 };
