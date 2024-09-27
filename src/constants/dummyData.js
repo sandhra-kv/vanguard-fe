@@ -511,9 +511,26 @@ export const deadlineData = [
 ];
 export const videoLinks = ["OXlbIS1h9vM", "afp9hr4ltH0", "amdXa3CfzHw", "JXUnrgp_8WI", "RhK4S2Dj1p8"];
 export const docLinks = [
-   "https://www.otcbahrain.com/wp-content/uploads/2017/12/Basic-Selling-Skills.pdf",
-   "https://cbseacademic.nic.in/web_material/Curriculum/Vocational/2018/Marketing/X/marketing%20&%20salesmanship%20-X.pdf",
-   "https://assets.henley.ac.uk/legacyUploads/A_winning_sales_strategy-1.pdf",
-   "https://ug.its.edu.in/sites/default/files/Sales%20Management.pdf",
-   "https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf",
+   {
+      name: "Basic Selling Skills",
+      url: "https://www.otcbahrain.com/wp-content/uploads/2017/12/Basic-Selling-Skills.pdf",
+   },
+   {
+      name: "Marketing & Salesmanship",
+      url: "https://cbseacademic.nic.in/web_material/Curriculum/Vocational/2018/Marketing/X/marketing%20&%20salesmanship%20-X.pdf",
+   },
+   {
+      name: "A Winning Sales Strategy Acbsacbcab",
+      url: "https://assets.henley.ac.uk/legacyUploads/A_winning_sales_strategy-1.pdf",
+   },
+   {
+      name: "Sales Management",
+      url: "https://ug.its.edu.in/sites/default/files/Sales%20Management.pdf",
+   },
+   {
+      name: "The Psychology of Selling",
+      url: "https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf",
+   },
 ];
+
+export const checkboxList = ["Webinar Leads", "Form Submissions", "Event Attendees", "Imported Lists"];
