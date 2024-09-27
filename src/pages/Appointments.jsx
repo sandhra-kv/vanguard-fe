@@ -2,7 +2,7 @@ import {
   CategoryScale,
   Chart as ChartJs,
   BarElement,
-  LinearScale,
+  LinearScale
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import RadarChart from "../components/RadarChart";
@@ -16,120 +16,84 @@ const Appointments = () => {
     borderSkipped: false,
     layout: {
       padding: {
-        top: 30,
-      },
+        top: 30
+      }
     },
-    // plugins: {
-    //   legend: {
-    //     display: false
-    //   },
-    //   tooltip: {
-    //     intersect: false,
-    //     filter(tooltipItem: TooltipItem<'bar'>) {
-    //       return tooltipItem.datasetIndex === 0;
-    //     },
-    //     callbacks: {
-    //       title: () => ''
-    //     },
-    //     displayColors: false,
-    //     backgroundColor: '#1E1B39',
-    //     padding: {
-    //       left: 12,
-    //       right: 12,
-    //       top: 5,
-    //       bottom: 5
-    //     },
-    //     bodyFont: { size: 14, weight: '500' },
-    //     yAlign: 'bottom' as const
-    //   }
-    // },
-    // scales: {
-    //   x: {
-    //     border: {
-    //       display: false
-    //     },
-    //     stacked: true,
-    //     grid: {
-    //       display: false
-    //     },
-    //     ticks: {
-    //       color: '#6D6D6D',
-    //       font: {
-    //         size: 14
-    //       },
-    //       callback: (index: string) => {
-    //         const maxLabelWidth = 100; // Maximum available width for label in pixels
-    //         const label = data?.labels?.[index];
-
-    //         const canvas = document.createElement('canvas');
-    //         const ctx = canvas.getContext('2d');
-
-    //         if (ctx) {
-    //           ctx.font = '14px Arial';
-    //           const labelWidth = ctx.measureText(label).width;
-
-    //           if (labelWidth > maxLabelWidth) {
-    //             const truncatedLabel = `${label.slice(
-    //               0,
-    //               Math.floor(maxLabelWidth / (labelWidth / label.length))
-    //             )}...`;
-    //             return truncatedLabel;
-    //           }
-    //         }
-
-    //         return label;
-    //       }
-    //     }
-    //   },
-    //   y: {
-    //     stacked: true,
-    //     max: maxDataValue,
-    //     display: false
-    //   }
-    // }
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          usePointStyle: true,
+          boxWidth: 8,
+          boxHeight: 8
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false
+        }
+      },
+      y: {
+        grid: {
+          display: false
+        },
+        beginAtZero: true
+      }
+    }
   };
 
   const data = {
-    labels: [
-      "Absence of OB",
-      "Closeness",
-      "Credibility",
-      "Heritage",
-      "M Disclosure",
-      "Provenance",
-      "Reliability",
-      "Transparency",
-    ],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
     datasets: [
       {
-        label: "American Express",
-        backgroundColor: "pink",
-        borderColor: "red",
-        borderWidth: 1,
-        data: [3, 5, 6, 7, 3, 5, 6, 7],
+        label: "Legend 1",
+        backgroundColor: "#505BC5",
+        borderWidth: 0,
+        data: [500, 200, 800, 700, 300, 500, 600, 700],
+        hoverBackgroundColor: "#505BC5",
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 0,
+          bottomRight: 0
+        },
+        barPercentage: 1,
+        barThickness: 24
       },
       {
-        label: "Mastercard",
-        backgroundColor: "lightblue",
-        borderColor: "blue",
-        borderWidth: 1,
-        data: [4, 7, 3, 6, 10, 7, 4, 6],
+        label: "Legend 2",
+        backgroundColor: "#848FF5",
+        borderWidth: 0,
+        data: [700, 500, 300, 600, 900, 700, 400, 600],
+        hoverBackgroundColor: "#848FF5",
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 0,
+          bottomRight: 0
+        },
+        barPercentage: 1,
+        barThickness: 24
       },
       {
-        label: "Paypal",
-        backgroundColor: "lightgreen",
-        borderColor: "green",
-        borderWidth: 1,
-        data: [10, 7, 4, 6, 9, 7, 3, 10],
-      },
-      {
-        label: "Visa",
-        backgroundColor: "yellow",
-        borderColor: "orange",
-        borderWidth: 1,
-        data: [6, 9, 7, 3, 10, 7, 4, 6],
-      },
-    ],
+        label: "Legend 3",
+        backgroundColor: "#CACFFF",
+        borderWidth: 0,
+        data: [600, 300, 400, 600, 700, 700, 300, 600],
+        hoverBackgroundColor: "#CACFFF",
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 0,
+          bottomRight: 0
+        },
+        barPercentage: 1,
+        barThickness: 24
+      }
+    ]
   };
 
   const radarChartData = {
@@ -138,7 +102,7 @@ const Appointments = () => {
       "Time Management",
       "Objection Handling",
       "Negotiation",
-      "Closing Techniques",
+      "Closing Techniques"
     ],
     datasets: [
       {
@@ -149,9 +113,9 @@ const Appointments = () => {
         pointBorderWidth: 2,
         pointRadius: 5,
         pointBorderColor: "#FFFFFF",
-        pointBackgroundColor: "#000000",
-      },
-    ],
+        pointBackgroundColor: "#000000"
+      }
+    ]
   };
 
   const radarChartOptions = {
@@ -166,39 +130,39 @@ const Appointments = () => {
         angleLines: {
           display: true,
           lineWidth: 2,
-          color: "#FFFFFF",
+          color: "#FFFFFF"
         },
         grid: {
           display: true,
           lineWidth: 2,
           color: "#FFFFFF",
-          circular: true,
+          circular: true
         },
         ticks: {
           display: true,
           stepSize: 25,
-          color: "#505BC5",
+          color: "#505BC5"
         },
         pointLabels: {
           font: {
             size: 12,
             weight: 500,
-            family: "Manrope",
+            family: "Manrope"
           },
-          color: "#3C3C3C",
-        },
-      },
+          color: "#3C3C3C"
+        }
+      }
     },
     plugins: {
       legend: {
-        display: false,
-      },
-    },
+        display: false
+      }
+    }
   };
 
   return (
     <div>
-      <div className="w-1/2 h-[280px]">
+      <div className="w-1/2 h-96 bg-white rounded-[6px] border border-[#E4E7EC] p-4">
         <Bar options={options} data={data} />
       </div>
       <div className="w-1/2 h-[280px]">
