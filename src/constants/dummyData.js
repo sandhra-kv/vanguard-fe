@@ -487,26 +487,33 @@ export const competitorData = [
 ];
 
 export const deadlineHeader = [
-  { key: "name", label: "Rep Name" },
-  { key: "task", label: "Task" },
-  { key: "deadline", label: "Deadline" },
+   { key: "name", label: "Rep Name" },
+   { key: "task", label: "Task" },
+   { key: "deadline", label: "Deadline" },
 ];
 
 export const deadlineData = [
-  {
-    name: "Muhammed Ali",
-    task: "Send proposal",
-    deadline: "2024-10-07",
-  },
-  {
-    name: "Sienna",
-    task: "Follow-up call",
-    deadline: "2024-10-15",
-  },
-  {
-    name: "Andrew",
-    task: "Product demo",
-    deadline: "2024-11-01",
-  },
+   {
+      name: "Muhammed Ali",
+      task: "Send proposal",
+      deadline: "2024-10-07",
+   },
+   {
+      name: "Sienna",
+      task: "Follow-up call",
+      deadline: "2024-10-15",
+   },
+   {
+      name: "Andrew",
+      task: "Product demo",
+      deadline: "2024-11-01",
+   },
 ];
-export const links = ["OXlbIS1h9vM", "afp9hr4ltH0", "amdXa3CfzHw", "JXUnrgp_8WI", "RhK4S2Dj1p8"];
+export const videoLinks = ["OXlbIS1h9vM", "afp9hr4ltH0", "amdXa3CfzHw", "JXUnrgp_8WI", "RhK4S2Dj1p8"];
+export const docLinks = [
+   "https://www.otcbahrain.com/wp-content/uploads/2017/12/Basic-Selling-Skills.pdf",
+   "https://cbseacademic.nic.in/web_material/Curriculum/Vocational/2018/Marketing/X/marketing%20&%20salesmanship%20-X.pdf",
+   "https://assets.henley.ac.uk/legacyUploads/A_winning_sales_strategy-1.pdf",
+   "https://ug.its.edu.in/sites/default/files/Sales%20Management.pdf",
+   "https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf",
+];

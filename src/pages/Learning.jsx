@@ -1,11 +1,11 @@
-import { links } from "../constants/dummyData";
+import { docLinks, videoLinks } from "../constants/dummyData";
 
 const Learning = () => {
    return (
       <section className="flex flex-col gap-4">
-         <h2>Level-up your Skills</h2>
+         <h1 className="text-lg font-lg">Level-up your Skills</h1>
          <div className="flex flex-wrap gap-3">
-            {links.map((embedId) => {
+            {videoLinks.map((embedId) => {
                return (
                   <iframe
                      key={embedId}
@@ -19,26 +19,32 @@ const Learning = () => {
                );
             })}
          </div>
+         <h1 className="text-lg font-lg">Have a quick read..!!</h1>
          <div className="flex flex-wrap gap-3">
-            {/* {links.map((embedId) => {
-               return ( */}
-            {/* <iframe
-               //  key={embedId}
-               width="300"
-               height="200"
-               src={`https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf`}
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowFullScreen
-               title="Embedded youtube"
-            /> */}
-            <object
-               data="https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf"
-               type="application/pdf"
-               width="300"
-               height="200"
-            ><a href="https://givbuxuniversity.com/wp-content/uploads/2021/03/The-Psychology-of-Selling.pdf">Read</a></object>
-            {/* );
-            })} */}
+            {docLinks.map((link, index) => {
+               return (
+                  <div key={index} className="relative flex flex-col gap-1 items-center">
+                     <iframe
+                        key={link}
+                        width="300"
+                        height="200"
+                        src={link}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title="Embedded Pdf"
+        
+                     />
+                     <a
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="absolute left-0 bottom-0 bg-[#505BC5] bg-opacity-85 text-white rounded-md px-2 py-0.5 text-sm "
+                     >
+                        Read
+                     </a>
+                  </div>
+               );
+            })}
          </div>
       </section>
    );
