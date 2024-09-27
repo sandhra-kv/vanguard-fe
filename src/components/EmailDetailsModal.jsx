@@ -22,7 +22,7 @@ const EmailDetailsModal = ({
               <div className="text-lg text-[#101928] font-medium">Sarah</div>
             </div>
           </div>
-          <div className="mt-5">{children}</div>
+          <div className="mt-5 max-h-72 overflow-y-auto">{children}</div>
         </div>
       </Modal>
     </div>
