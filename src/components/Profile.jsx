@@ -7,7 +7,7 @@ const Profile = ({ name, email, phone, url, date }) => {
         <div className="flex justify-center mt-3">
           <div className="relative">
             <img
-              src="https://via.placeholder.com/100"
+              src="/images/profilePic.svg"
               alt="profile"
               className="w-20 h-20 rounded-full object-cover"
             />

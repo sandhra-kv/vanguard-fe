@@ -1,27 +1,27 @@
-import React, { useRef } from 'react';
-import { Bar } from 'react-chartjs-2';
+import React, { useRef } from "react";
+import { Bar } from "react-chartjs-2";
 
 function TeamCommunicationChart() {
   const chartRef = useRef(null);
 
   const data = {
-    labels: ['Muhammadal', 'Sienna', 'Andrew'],
+    labels: ["Muhammadal", "Sienna", "Andrew"],
     datasets: [
       {
-        label: 'label1',
+        label: "Rep",
         data: [30, 70, 60],
-        backgroundColor: "#505BC5",
+        backgroundColor: "#505BC5"
       },
       {
-        label: 'label2',
+        label: "Client",
         data: [10, 20, 30],
-        backgroundColor: "#848FF5",
-      },
-    ],
+        backgroundColor: "#848FF5"
+      }
+    ]
   };
 
   const options = {
-        maintainAspectRatio: false,
+    maintainAspectRatio: false,
     responsive: true,
     borderSkipped: false,
     layout: {
@@ -32,7 +32,7 @@ function TeamCommunicationChart() {
     plugins: {
       legend: {
         display: true,
-        position: 'bottom',
+        position: "bottom",
         labels: {
           usePointStyle: true,
           boxWidth: 8,
@@ -56,9 +56,9 @@ function TeamCommunicationChart() {
   };
 
   return (
-
+    <div className="h-96 w-full bg-white rounded-[6px] border border-[#E4E7EC] p-4">
       <Bar ref={chartRef} data={data} options={options} />
-    
+    </div>
   );
 }
 

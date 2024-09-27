@@ -181,9 +181,9 @@ const ProfilePage = () => {
       </div>
       <div className="flex flex-row gap-10">
         <Profile
-          name="Cizil Maria"
-          email="cizil@keycode.com"
-          url="cizil@keycode.com"
+          name="David Fayem"
+          email="david@rayna.ui"
+          url="david@rayna.ui"
           phone="08168141116"
           date="Friday, Sept 25, 2025"
         />
@@ -214,8 +214,11 @@ const ProfilePage = () => {
               success={true}
             />
           </div>
-          <div className="h-96  bg-white rounded-[6px] border border-[#E4E7EC] p-4 mt-10">
-            <Bar options={options} data={data} />
+          <div className="h-[430px]  bg-white rounded-[6px] border border-[#E4E7EC] p-4 mt-10">
+            <div className="text-[#475367] font-semibold">Performance</div>
+            <div className="h-96 w-full">
+              <Bar options={options} data={data} />
+            </div>
           </div>
         </div>
         <div className="h-[569px] w-[400px] bg-white rounded-[6px] border border-[#E4E7EC] p-4 mt-10">

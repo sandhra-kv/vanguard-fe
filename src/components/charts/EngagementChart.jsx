@@ -1,18 +1,18 @@
-import React, { useRef } from 'react';
-import { Bar } from 'react-chartjs-2';
+import React, { useRef } from "react";
+import { Bar } from "react-chartjs-2";
 
 function EngagementChart() {
   const chartRef = useRef(null);
 
   const data = {
-    labels: ['Muhammadal', 'Sienna', 'Andrew'],
+    labels: ["Muhammadal", "Sienna", "Andrew"],
     datasets: [
       {
-        label: 'label1',
+        label: "label1",
         data: [100, 20, 130],
-        backgroundColor: "#505BC5",
+        backgroundColor: "#848FF5"
       }
-    ],
+    ]
   };
 
   const options = {
@@ -26,8 +26,8 @@ function EngagementChart() {
     },
     plugins: {
       legend: {
-        display: true,
-        position: 'bottom',
+        display: false,
+        position: "bottom",
         labels: {
           usePointStyle: true,
           boxWidth: 8,
@@ -45,13 +45,15 @@ function EngagementChart() {
         grid: {
           display: false
         },
-        beginAtZero: true,
+        beginAtZero: true
       }
     }
   };
 
   return (
+    <div className="h-96 w-full bg-white rounded-[6px] border border-[#E4E7EC] p-4">
       <Bar ref={chartRef} data={data} options={options} />
+    </div>
   );
 }
 

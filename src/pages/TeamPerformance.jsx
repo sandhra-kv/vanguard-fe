@@ -3,6 +3,9 @@ import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEff
 import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
 import HorizontalBarChart from "../components/charts/HorizontalBarChart";
 import { horizontalChartData } from "../constants/dummyData";
+import ExcitementLevelChart from "../components/charts/ExcitementLevelChart";
+import PipelineVelocity from "../components/charts/PipelineVelocity";
+import PieChart from "../components/charts/PieChart";
 
 const TeamPerformance = () => {
   return (
@@ -42,12 +45,50 @@ const TeamPerformance = () => {
         </div>
       </div>
       <p className="text-xl font-semibold pt-5">Team Leaderboard</p>
-    {/* <div class="w-[500px] h-[500px]">
-      <TeamCommunicationChart />
-      <EngagementChart />
-      <MeetingVolumeAndTimeEfficiencyChart />
-      <HorizontalBarChart data={horizontalChartData} />
-    </div> */}
+      <p className="text-xl font-semibold pt-5">
+        Aggregated Team Communication Insights
+      </p>
+      <div className="flex w-full gap-4 mt-5">
+        <div className="w-1/2 h-[430px]">
+          <TeamCommunicationChart />
+        </div>
+        <div className="w-1/2 h-[430px]">
+          <HorizontalBarChart data={horizontalChartData} />
+        </div>
+      </div>
+      <p className="text-xl font-semibold pt-5">
+        Engagement & Emotional Intelligence
+      </p>
+      <div className="flex w-full gap-4 mt-5">
+        <div className="w-1/2 h-[430px]">
+          <EngagementChart />
+        </div>
+        <div className="w-1/2 h-[430px]">
+          <ExcitementLevelChart />
+        </div>
+      </div>
+      <p className="text-xl font-semibold pt-5">
+        Meeting Volume & Time Efficiency
+      </p>
+      <div className="flex w-full gap-4 mt-5">
+        <div className="w-1/2 h-[430px]">
+          <MeetingVolumeAndTimeEfficiencyChart />
+        </div>
+        <div className="w-1/2 h-[430px]">
+          <PipelineVelocity />
+        </div>
+      </div>
+      <p className="text-xl font-semibold pt-5">
+        Key Discussion Topics Tracker
+      </p>
+      <div className="flex w-full gap-4 mt-5">
+        <div className="w-1/3 h-[430px]">
+          <PieChart />
+        </div>
+        <div className="w-1/3 h-[430px]">
+          <PieChart />
+        </div>
+      </div>
     </div>
   );
 };
