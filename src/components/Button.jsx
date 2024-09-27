@@ -5,6 +5,7 @@ const Button = ({
   onClick,
   type = "button",
   className = "",
+  labelClassName = "",
   disabled = false,
   variant = "primary",
   icon,
@@ -34,7 +35,7 @@ const Button = ({
     >
       <div className="flex flex-row gap-2 items-center">
         {icon && <img src={icon} alt="icon" />}
-        <div>{label}</div>
+        <div className={labelClassName}>{label}</div>
       </div>
     </button>
   );

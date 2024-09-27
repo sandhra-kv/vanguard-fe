@@ -83,32 +83,34 @@ const LeadActivity = ({ lead, isOpen, className = "", onClose }) => {
         onSelect={setSelectedTab}
       />
       <div className="h-[calc(100%-145px)] relative">
-        <div className="h-[calc(100%-250px)] overflow-y-auto">
-          {selectedTab === "Activity Log" ? (
-            <Stepper steps={steps} />
-          ) : (
-            <ActivityInsights />
-          )}
-        </div>
-        <div className="absolute bottom-4 px-9 w-full">
-          <div className="relative w-full flex">
-            <input
-              type="text"
-              placeholder="Type here..."
-              className="bg-[#F6F6F6] h-[52px] rounded-lg pl-4 pr-[56px] py-2.5 w-full border-0 outline-0"
-              value={search}
-              onChange={(evt) => setSearch(evt.target.value)}
-            />
+        {selectedTab === "Activity Log" ? (
+          <>
+            <div className="h-[calc(100%-250px)] overflow-y-auto px-9 pt-4">
+              <Stepper steps={steps} />
+            </div>
+            <div className="absolute bottom-4 px-9 w-full">
+              <div className="relative w-full flex">
+                <input
+                  type="text"
+                  placeholder="Type here..."
+                  className="bg-[#F6F6F6] h-[52px] rounded-lg pl-4 pr-[56px] py-2.5 w-full border-0 outline-0"
+                  value={search}
+                  onChange={(evt) => setSearch(evt.target.value)}
+                />
 
-            <img
-              role="presentation"
-              src="/icons/send.svg"
-              alt="send"
-              onClick={sendMessage}
-              className="absolute right-4 top-2.5 cursor-pointer"
-            />
-          </div>
-        </div>
+                <img
+                  role="presentation"
+                  src="/icons/send.svg"
+                  alt="send"
+                  onClick={sendMessage}
+                  className="absolute right-4 top-2.5 cursor-pointer"
+                />
+              </div>
+            </div>
+          </>
+        ) : (
+          <ActivityInsights />
+        )}
       </div>
     </SidePane>
   );
