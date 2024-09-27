@@ -1,7 +1,8 @@
 import EngagementChart from "../components/charts/EngagementChart";
 import MeetingVolumeAndTimeEfficiencyChart from "../components/charts/MeetingEfficiency";
 import TeamCommunicationChart from "../components/charts/TeamCommunicationChart";
-
+import HorizontalBarChart from "../components/charts/HorizontalBarChart";
+import { horizontalChartData } from "../constants/dummyData";
 
 const TeamPerformance = () => {
   return (
@@ -45,6 +46,7 @@ const TeamPerformance = () => {
       <TeamCommunicationChart />
       <EngagementChart />
       <MeetingVolumeAndTimeEfficiencyChart />
+      <HorizontalBarChart data={horizontalChartData} />
     </div> */}
     </div>
   );
