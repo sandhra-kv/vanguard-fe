@@ -6,8 +6,10 @@ import MeetingDetails from "../components/MeetingDetailsModal";
 import { header } from "../constants/dummyData";
 import { apiCall } from "../services/axios";
 import LeadActivity from "../components/LeadActivity";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const closeModal = () => setShowModal(false);
   const [lead, setLead] = useState(null);
@@ -20,7 +22,7 @@ const Dashboard = () => {
       const resp = await apiCall({
         method: "GET",
         url: `/campaign/leads`,
-        data: {},
+        data: {}
       });
 
       return resp;
@@ -60,7 +62,7 @@ const Dashboard = () => {
             icon="/icons/download.svg"
           />
           <Button
-            onClick={() => {}}
+            onClick={() => navigate('/create-campaign')}
             label="Create Campaigns"
             variant="primary"
             icon="/icons/rounded-plus.svg"
