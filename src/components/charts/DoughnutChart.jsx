@@ -52,7 +52,11 @@ const DoughnutChart = ({ value }) => {
       },
    };
 
-   return <Doughnut data={chartData} options={chartOptions} />;
+   return (
+      <div className="size-36">
+         <Doughnut data={chartData} options={chartOptions} width={144} height={144} />
+      </div>
+   );
 };
 
 export default DoughnutChart;

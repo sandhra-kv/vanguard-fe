@@ -1,32 +1,21 @@
 import React from "react";
 import Button from "./Button";
 import { engagementHistory } from "../constants/dummyData";
+import LeadAnalytics from "./LeadAnalytics";
 
 const ActivityInsights = ({}) => {
-  return (
-    <>
-      <div className="bg-[#F7F8FF] px-9 py-6 w-full">
-        <div className="text-base text-[#344357] text-center">
-          Got something to say? Reach out to make the connection!
-        </div>
-        <div className="flex gap-3 justify-center items-center pt-3">
-          <Button
-            variant="secondary"
-            label="Send email"
-            className="text-base fond-medium text-[#344054]"
-          />
-          <Button
-            variant="secondary"
-            label="Call"
-            className="text-base fond-medium text-[#344054]"
-          />
-          <Button
-            variant="secondary"
-            label="Schedule meeting"
-            className="text-base fond-medium text-[#344054]"
-          />
-        </div>
-      </div>
+   return (
+      <>
+         <div className="bg-[#F7F8FF] px-9 py-6 w-full">
+            <div className="text-base text-[#344357] text-center">
+               Got something to say? Reach out to make the connection!
+            </div>
+            <div className="flex gap-3 justify-center items-center pt-3">
+               <Button variant="secondary" label="Send email" className="text-base fond-medium text-[#344054]" />
+               <Button variant="secondary" label="Call" className="text-base fond-medium text-[#344054]" />
+               <Button variant="secondary" label="Schedule meeting" className="text-base fond-medium text-[#344054]" />
+            </div>
+         </div>
       <div className="px-9 pt-6">
         <div className="relative bg-[#F7F8FF] p-6 max-h-80 overflow-y-auto rounded-xl">
           {engagementHistory?.map((item, index) => (
@@ -50,8 +39,9 @@ const ActivityInsights = ({}) => {
           ))}
         </div>
       </div>
-    </>
-  );
+         <LeadAnalytics />
+      </>
+   );
 };
 
 export default ActivityInsights;
