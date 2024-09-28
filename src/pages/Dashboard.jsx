@@ -18,12 +18,10 @@ const Dashboard = () => {
   const [leads, setLeads] = useState(null);
   const [emailid, setEmailId] = useState("");
 
-  const openModal = (type, id = "") => {
+  const openModal = (type) => {
     console.log(type);
-    if (type === "email_sent") {
-      setEmailId(id);
-      setShowEmailModal(true);
-    } else setShowModal(true);
+    if (type === "email_sent") setShowEmailModal(true);
+    else setShowModal(true);
   };
 
   const getData = async () => {
@@ -56,10 +54,10 @@ const Dashboard = () => {
         <MeetingDetails
           showModal={showModal}
           closeModal={closeModal}
-          name="Analese Jonathen"
+          name="Michael"
           date="2024-09-15T15:00:00.000Z"
-          duration="3 hours 57 minutes"
-          videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+          duration="25 seconds"
+          videoSrc="/video/sample.mp4"
         />
       )}
       {showEmailModal && (

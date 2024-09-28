@@ -5,7 +5,7 @@ import VideoPlayer from "./VideoPlayer";
 import Tab from "./Tab";
 import { formatISODate } from "../utils/common";
 import ModalAnalytics from "./ModalAnalytics";
-import { TimelineData } from "../constants/dummyData";
+import { TimelineData, discussionTranscript, meetingSummaryHTML } from "../constants/dummyData";
 import Stepper from "./Stepper";
 import { apiCall } from "../services/axios";
 
@@ -18,7 +18,8 @@ const MeetingDetails = ({
   videoSrc,
 }) => {
   const intervalId = useRef(null);
-  const content = "<p>Hello <strong>World</strong>!</p>";
+  const content = meetingSummaryHTML;
+  const transcript = discussionTranscript;
 
   const [selectedTab, setSelectedTab] = useState("Summary");
   const [search, setSearch] = useState("");
@@ -121,17 +122,27 @@ const MeetingDetails = ({
         <div className="py-6 px-9 flex flex-row gap-7">
           <div className="flex flex-col gap-4">
             <VideoPlayer src={videoSrc} poster="" width="640" height="360" />
-            <div className="h-[312px]">
+            <div className="h-[312px] w-[640px]">
               <Tab
                 tabs={["Summary", "Transcript", "Analytics"]}
                 selectedTab={selectedTab}
                 onSelect={handleTab}
               />
               {selectedTab === "Summary" && (
-                <div
+                <div className="overflow-scroll h-[250px]">
+                  <div
                   dangerouslySetInnerHTML={{ __html: content }}
                   className="p-6"
                 />
+                </div>
+              )}
+               {selectedTab === "Transcript" && (
+                <div className="overflow-scroll h-[250px]">
+                  <div
+                  dangerouslySetInnerHTML={{ __html: transcript }}
+                  className="p-6"
+                />
+                </div>
               )}
               {selectedTab === "Analytics" && (
                 <ModalAnalytics timelineData={TimelineData} />

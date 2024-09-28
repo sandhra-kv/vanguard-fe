@@ -534,3 +534,63 @@ export const docLinks = [
 ];
 
 export const checkboxList = ["Webinar Leads", "Form Submissions", "Event Attendees", "Imported Lists"];
+
+export const meetingSummaryHTML = `
+<h3>Key Discussion Points</h3>
+<ul>
+    <li><strong>Project Overview:</strong>
+        <ul>
+            <li>Sarah provided an overview of the project goals and timeline.</li>
+            <li>The project aims to launch the new product website by December 2024.</li>
+        </ul>
+    </li>
+    <li><strong>Team Roles & Responsibilities:</strong>
+        <ul>
+            <li>John will lead the development team and ensure weekly code reviews.</li>
+            <li>Emily will be responsible for UI/UX design, wireframes to be submitted by October 5.</li>
+            <li>Michael will create a marketing strategy and provide a content plan by mid-October.</li>
+        </ul>
+    </li>
+    <li><strong>Timeline & Milestones:</strong>
+        <ul>
+            <li><strong>October 15:</strong> Initial design approval.</li>
+            <li><strong>November 10:</strong> First development sprint completed.</li>
+            <li><strong>December 5:</strong> Final review and testing phase.</li>
+        </ul>
+    </li>
+    <li><strong>Potential Risks:</strong>
+        <ul>
+            <li>Resource availability may be an issue if additional design support is needed.</li>
+            <li>Delays in wireframe approval could affect the development timeline.</li>
+        </ul>
+    </li>
+    <li><strong>Next Steps:</strong>
+        <ul>
+            <li>Emily to submit wireframes for review by October 5.</li>
+            <li>Development team kickoff meeting scheduled for October 7.</li>
+            <li>Sarah to schedule weekly status meetings.</li>
+        </ul>
+    </li>
+</ul>
+`;
+
+export const discussionTranscript = `
+<div>
+    <p><strong>Michael:</strong> Good morning, everyone. Let's start with a quick overview of the project goals and timeline. We aim to launch the new product website by December 2024.</p>
+    <p><strong>John:</strong> That sounds good. What about our team roles and responsibilities?</p>
+    <p><strong>Michael:</strong> I’ll lead the development team, ensuring we have weekly code reviews. Alex, you’re in charge of the UI/UX design. Please submit your wireframes by October 5.</p>
+    <p><strong>Alex:</strong> Got it! I’ll make sure they’re ready.</p>
+    <p><strong>Michael:</strong> David, you’ll create the marketing strategy and content plan by mid-October, right?</p>
+    <p><strong>David:</strong> Yes, that’s the plan.</p>
+    <p><strong>John:</strong> What’s our timeline for key milestones?</p>
+    <p><strong>Michael:</strong> We need initial design approval by October 15, the first development sprint completed by November 10, and the final review by December 5.</p>
+    <p><strong>Alex:</strong> Are there any potential risks we should be aware of?</p>
+    <p><strong>Michael:</strong> Yes, we might face resource availability issues if we need extra design support, and delays in wireframe approval could affect our timeline.</p>
+    <p><strong>John:</strong> What are the next steps?</p>
+    <p><strong>Michael:</strong> Alex, please submit your wireframes by October 5. We have a kickoff meeting scheduled for October 7, and I’ll arrange weekly status meetings.</p>
+    <p><strong>David:</strong> Sounds like a plan!</p>
+    <p><strong>Michael:</strong> Great! Let’s stay on track and communicate regularly. Thank you, everyone!</p>
+</div>
+`;
+
+
