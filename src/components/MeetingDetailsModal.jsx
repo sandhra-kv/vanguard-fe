@@ -15,7 +15,7 @@ const MeetingDetails = ({
   name,
   date,
   duration,
-  videoSrc
+  videoSrc,
 }) => {
   const intervalId = useRef(null);
   const content = meetingSummaryHTML;
@@ -33,17 +33,18 @@ const MeetingDetails = ({
   const sendMessage = async () => {
     if (thread && search)
       try {
+        const message = search;
+        setSearch("");
         const resp = await apiCall({
           method: "POST",
           url: `/chat`,
           data: {
             thread_id: thread,
-            message: search,
-            senderName: "Ram Rao"
+            message: message,
+            senderName: "Ram Rao",
           },
-          isAI: true
+          isAI: true,
         });
-        setSearch('')
         return resp;
       } catch (e) {
         console.log(e);
@@ -55,7 +56,7 @@ const MeetingDetails = ({
       const resp = await apiCall({
         method: "GET",
         url: `/chats/threads?subjectId=${videoSrc}`,
-        data: {}
+        data: {},
       });
 
       return resp;
@@ -83,7 +84,7 @@ const MeetingDetails = ({
       const resp = await apiCall({
         method: "GET",
         url: `/chats/${id}`,
-        data: {}
+        data: {},
       });
 
       return resp;

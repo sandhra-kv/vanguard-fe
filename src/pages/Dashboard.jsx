@@ -16,8 +16,10 @@ const Dashboard = () => {
   const closeModal = () => setShowModal(false);
   const [lead, setLead] = useState(null);
   const [leads, setLeads] = useState(null);
+  const [emailid, setEmailId] = useState("");
 
   const openModal = (type) => {
+    console.log(type);
     if (type === "email_sent") setShowEmailModal(true);
     else setShowModal(true);
   };
@@ -27,7 +29,7 @@ const Dashboard = () => {
       const resp = await apiCall({
         method: "GET",
         url: `/campaign/leads`,
-        data: {}
+        data: {},
       });
 
       return resp;
@@ -62,6 +64,7 @@ const Dashboard = () => {
         <EmailDetailsModal
           showModal={showEmailModal}
           closeModal={() => setShowEmailModal(false)}
+          id={emailid}
         />
       )}
 
