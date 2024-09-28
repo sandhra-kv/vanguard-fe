@@ -14,6 +14,8 @@ const Learning = () => {
   const sendMessage = async () => {
     if (threadId && search)
       try {
+        const message = search;
+        setSearch("");
         const resp = await apiCall({
           method: "POST",
           url: `/chat`,
@@ -21,10 +23,10 @@ const Learning = () => {
             thread_id: threadId,
             message: search,
             senderName: "Ram Rao",
+            subjectType: "learning",
           },
           isAI: true,
         });
-        setSearch("");
         return resp;
       } catch (e) {
         console.log(e);
@@ -85,7 +87,7 @@ const Learning = () => {
   return (
     <div className="flex p-5 h-full">
       <section className="flex flex-col h-[calc(100vh-85px)] overflow-y-auto gap-4">
-      <h1 className="text-2xl font-semibold">Learning</h1>
+        <h1 className="text-2xl font-semibold">Learning</h1>
         <h1 className="text-lg font-lg">Level-up your Skills</h1>
         <div className="flex flex-wrap gap-3">
           {videoLinks.map((embedId) => {

@@ -65,7 +65,9 @@ const Stepper = ({ steps, openModal }) => {
                   <button
                     value="viewDetails"
                     className="px-4 py-2 mt-3 font-semibold h-[36px] rounded-lg text-sm focus:outline-none bg-[#F7F8FF] text-[#505BC5]"
-                    onClick={() => openModal(step?.messageType)}
+                    onClick={() =>
+                      openModal(step?.messageType, step?.metaData?.emailid)
+                    }
                   >
                     {step?.metaData?.button}
                   </button>
