@@ -18,7 +18,6 @@ const Dashboard = () => {
   const [leads, setLeads] = useState(null);
 
   const openModal = (type) => {
-    console.log(type);
     if (type === "email_sent") setShowEmailModal(true);
     else setShowModal(true);
   };
@@ -53,10 +52,10 @@ const Dashboard = () => {
         <MeetingDetails
           showModal={showModal}
           closeModal={closeModal}
-          name="Analese Jonathen"
+          name="Michael"
           date="2024-09-15T15:00:00.000Z"
-          duration="3 hours 57 minutes"
-          videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+          duration="25 seconds"
+          videoSrc="/video/sample.mp4"
         />
       )}
       {showEmailModal && (
